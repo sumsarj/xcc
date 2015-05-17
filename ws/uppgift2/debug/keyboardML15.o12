@@ -1,0 +1,45 @@
+mod:keyboardML15:O12:keyboardML15.o12
+seg:text:46
+seg:bss:0
+seg:data:0
+seg:rodata:0
+C:text	1B9CCC09C06C8287C76C80E6F30002C1
+C:text	802416E6F30002C18025F8E6F3000287
+C:text	8300806C80EC80200220E01B843D
+G:text:keyboardML15:00000000:_get_key
+SY:C:M:keyboardML15$F:/Dokument/GitHub/xcc/src/keyboardML15.c
+SY:C:F:keyboardML15:text:_get_key:00000000:7
+SY:C:X:keyboardML15:7:1:text:0
+SY:C:S:F:keyboardML15:get_key:_get_key:(typ12)
+SY:C:S:F:keyboardML15:__func__:___func__:(typ11)
+SY:C:S:L:keyboardML15:get_key:kbd_read:2:(typ16-keyboardML15)
+SY:C:S:L:keyboardML15:get_key:value:0:(typ12)
+SY:C:X:keyboardML15:9:23:text:2
+SY:C:X:keyboardML15:10:7:text:B
+SY:C:X:keyboardML15:11:4:text:B
+SY:C:X:keyboardML15:12:9:text:13
+SY:C:X:keyboardML15:14:42:text:1B
+SY:C:X:keyboardML15:18:1:text:2B
+SY:C:Z:keyboardML15:18:1:text:2B
+SY:C:E:keyboardML15:text:_get_key:0000002E:18
+SY:C:T:  typ0 V (-1)
+SY:C:T:  typ1 L (4)
+SY:C:T:  typ2 l (4)
+SY:C:T:  typ3 C (1)
+SY:C:T:  typ4 c (1)
+SY:C:T:  typ5 S (2)
+SY:C:T:  typ6 s (2)
+SY:C:T:  typ7 g (4)
+SY:C:T:  typ8 G (4)
+SY:C:T:  typ9 h (4)
+SY:C:T:  typ10 R (2)
+SY:C:T:  typ11 I (2)
+SY:C:T:  typ12 i (2)
+SY:C:T:  typ13 E (2)
+SY:C:T:  typ14 F (2)
+SY:C:T:  typ15 P (2)
+SY:C:T:keyboardML15: typ16-keyboardML15 a *(typ4)
+SY:C:T: typ2 l (4)
+SY:C:T: typ4 c (1)
+SY:C:T: typ6 s (2)
+e

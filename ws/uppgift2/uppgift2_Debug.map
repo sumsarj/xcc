@@ -1,0 +1,71 @@
+QLD (Version 4.8.1)- Link/Load Summary: 'debug\uppgift2_Debug.s19'
+SCRIPT FILES FROM THE FOLLOWING PATH(S):
+  'F:/Program/GMV/EducDist/config/xcc12'
+
+SCRIPT READ FROM THE FOLLOWING FILE(S):
+  'default.lsc'
+
+---------------------------
+ SEARCHED LIBRARIES:
+ 'F:/Program/GMV/EducDist/lib/xcc12/libccd.e12'
+
+---------------------------
+ PROGRAM ENTRY:'__start'
+---------------------------
+ GROUPS AND SEGMENTS:
+
+  GROUP 'test_group', READ/WRITE ,allocation to: 00001000 - 000010ED, (size: 238 Bytes)
+   00001000 00001009 'init'
+   0000100A 000010ED 'text'
+
+  GROUP 'interrupt_vectors', READ/WRITE
+   NO SEGMENTS
+
+  GROUP 'const_group',
+   NO SEGMENTS
+---------------------------
+LINKER DEFINED CONSTANTS:
+   __rom_code_enabled = 0
+   __heap_start = 00000000
+  from segment 'text'
+   0000100A '__text__start'
+   000010EE '__text__end'
+   000000E4 '__text__size'
+  from segment 'init'
+   00001000 '__init__start'
+   0000100A '__init__end'
+   0000000A '__init__size'
+  from segment 'bss'
+   00000000 '__bss__start'
+   00000000 '__bss__end'
+   00000000 '__bss__size'
+  from segment 'data'
+   00000000 '__data__start'
+   00000000 '__data__end'
+   00000000 '__data__size'
+  from segment 'rodata'
+   00000000 '__rodata__start'
+   00000000 '__rodata__end'
+   00000000 '__rodata__size'
+---------------------------
+GLOBAL SYMBOL(S):
+
+ in module: '_startup' of type 'O12' defined in file '_startup.o12'
+  in segment: 'init'
+   00001006 '_exit'
+   00001000 '__start'
+
+ in module: 'displayML15' of type 'O12' defined in file 'displayML15.o12'
+  in segment: 'text'
+   0000100A '_display_digits'
+   00001049 '_display_dec'
+
+ in module: 'keyboardML15' of type 'O12' defined in file 'keyboardML15.o12'
+  in segment: 'text'
+   000010AC '_get_key'
+
+ in module: 'uppgift2' of type 'O12' defined in file 'uppgift2.o12'
+  in segment: 'text'
+   000010DA '_main'
+---
+ End of listfile

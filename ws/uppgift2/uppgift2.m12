@@ -4,6 +4,7 @@
 #
 #-----------------------------------------------
 #SETTINGS SECTION
+##CSIMSET=".\uppgift2.hc12sim"
 ##EXTMAKEFILE=""
 ##EXTMAKEFILEPARAM=""
 #+[BackCol(0)]=
@@ -51,7 +52,8 @@ FILES= \
 	"..\..\src\displayML15.c" "" "1"  \
 	"..\..\src\displayML15.h" "" "1"  \
 	"..\..\src\keyboardML15.c" "" "1"  \
-	"..\..\src\keyboardML15.h" "" "1" 
+	"..\..\src\keyboardML15.h" "" "1"  \
+	"..\..\src\uppgift2.c" "" "1" 
 #-----------------------------------------------
 #PROJECT OPTIONS SECTION
 
@@ -70,7 +72,8 @@ LNFLAGS=-g -i default.lsc
 OBJ= \
 	"debug\_startup.o12" \
 	"debug\displayML15.o12" \
-	"debug\keyboardML15.o12"
+	"debug\keyboardML15.o12" \
+	"debug\uppgift2.o12"
 #-----------------------------------------------
 #DEFINES/UNDEFINES SECTION
 
@@ -111,7 +114,7 @@ LIBPATH=
 
 # Application
 "debug\uppgift2_Debug.s19": $(OBJ)
-	LINK -o"debug\uppgift2_Debug.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -l"D:\Program\EducDist\bin\..\lib\xcc12\libccd.e12"  $(OBJ)
+	LINK -o"debug\uppgift2_Debug.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -l"F:\Program\GMV\EducDist\bin\..\lib\xcc12\libccd.e12"  $(OBJ)
 #-----------------------------------------------
 
 
@@ -124,20 +127,29 @@ clean:
 	RMFI "debug\displayML15.o12"
 	RMFI "debug\keyboardML15.o12"
 	RMFI "debug\keyboardML15.o12"
+	RMFI "debug\uppgift2.o12"
 #-----------------------------------------------
 
 
 # Dependencies and their build rules
 
 "debug\_startup.o12":	\
-	"D:/Dokument/GitHub/xcc/src/_startup.asm"
-	ASSM  $(ASFLAGS) $(ASMDEF) -o"debug\_startup.o12" "D:/Dokument/GitHub/xcc/src/_startup.asm"
+	"F:/Dokument/GitHub/xcc/src/_startup.asm"
+	ASSM  $(ASFLAGS) $(ASMDEF) -o"debug\_startup.o12" "F:/Dokument/GitHub/xcc/src/_startup.asm"
 "debug\displayML15.o12":	\
-	"D:/Dokument/GitHub/xcc/src/displayML15.c"
-	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  $(INC) -o"debug\displayML15.o12" "D:/Dokument/GitHub/xcc/src/displayML15.c"
+	"F:/Dokument/GitHub/xcc/src/displayML15.c"\
+	"F:/Dokument/GitHub/xcc/src/ports.h"
+	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  $(INC) -o"debug\displayML15.o12" "F:/Dokument/GitHub/xcc/src/displayML15.c"
 "debug\keyboardML15.o12":	\
-	"D:/Dokument/GitHub/xcc/src/keyboardML15.c"
-	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  $(INC) -o"debug\keyboardML15.o12" "D:/Dokument/GitHub/xcc/src/keyboardML15.c"
+	"F:/Dokument/GitHub/xcc/src/keyboardML15.c"\
+	"F:/Dokument/GitHub/xcc/src/ports.h"
+	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  $(INC) -o"debug\keyboardML15.o12" "F:/Dokument/GitHub/xcc/src/keyboardML15.c"
+"debug\uppgift2.o12":	\
+	"F:/Dokument/GitHub/xcc/src/uppgift2.c"\
+	"F:/Dokument/GitHub/xcc/src/ports.h"\
+	"F:/Dokument/GitHub/xcc/src/keyboardML15.h"\
+	"F:/Dokument/GitHub/xcc/src/displayML15.h"
+	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  $(INC) -o"debug\uppgift2.o12" "F:/Dokument/GitHub/xcc/src/uppgift2.c"
 !EICONF	Debug
 
 !IFCONF	Final
@@ -155,7 +167,8 @@ LNFLAGS=-i default.lsc
 OBJ= \
 	"final\_startup.o12" \
 	"final\displayML15.o12" \
-	"final\keyboardML15.o12"
+	"final\keyboardML15.o12" \
+	"final\uppgift2.o12"
 #-----------------------------------------------
 #DEFINES/UNDEFINES SECTION
 
@@ -198,7 +211,7 @@ LIBPATH=
 
 # Application
 "final\uppgift2_Final.s19": $(OBJ)
-	LINK -o"final\uppgift2_Final.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -L"D:\Program\EducDist\bin\..\lib\xcc12" -l"D:\Program\EducDist\bin\..\lib\xcc12\libcc.e12"  $(OBJ)
+	LINK -o"final\uppgift2_Final.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -L"F:\Program\GMV\EducDist\bin\..\lib\xcc12" -l"F:\Program\GMV\EducDist\bin\..\lib\xcc12\libcc.e12"  $(OBJ)
 #-----------------------------------------------
 
 
@@ -211,20 +224,30 @@ clean:
 	RMFI "final\displayML15.o12"
 	RMFI "final\keyboardML15.o12"
 	RMFI "final\keyboardML15.o12"
+	RMFI "final\uppgift2.o12"
 #-----------------------------------------------
 
 
 # Dependencies and their build rules
 
 "final\_startup.o12":	\
-	"D:/Dokument/GitHub/xcc/src/_startup.asm"
-	ASSM  $(ASFLAGS) $(ASMDEF) -o"final\_startup.o12" "D:/Dokument/GitHub/xcc/src/_startup.asm"
+	"F:/Dokument/GitHub/xcc/src/_startup.asm"
+	ASSM  $(ASFLAGS) $(ASMDEF) -o"final\_startup.o12" "F:/Dokument/GitHub/xcc/src/_startup.asm"
 "final\displayML15.o12":	\
-	"D:/Dokument/GitHub/xcc/src/displayML15.c"
+	"F:/Dokument/GitHub/xcc/src/displayML15.c"\
+	"F:/Dokument/GitHub/xcc/src/ports.h"
 	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  \
-	-I"D:\Program\EducDist\bin\..\include" $(INC) -o"final\displayML15.o12" "D:/Dokument/GitHub/xcc/src/displayML15.c"
+	-I"F:\Program\GMV\EducDist\bin\..\include" $(INC) -o"final\displayML15.o12" "F:/Dokument/GitHub/xcc/src/displayML15.c"
 "final\keyboardML15.o12":	\
-	"D:/Dokument/GitHub/xcc/src/keyboardML15.c"
+	"F:/Dokument/GitHub/xcc/src/keyboardML15.c"\
+	"F:/Dokument/GitHub/xcc/src/ports.h"
 	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  \
-	-I"D:\Program\EducDist\bin\..\include" $(INC) -o"final\keyboardML15.o12" "D:/Dokument/GitHub/xcc/src/keyboardML15.c"
+	-I"F:\Program\GMV\EducDist\bin\..\include" $(INC) -o"final\keyboardML15.o12" "F:/Dokument/GitHub/xcc/src/keyboardML15.c"
+"final\uppgift2.o12":	\
+	"F:/Dokument/GitHub/xcc/src/uppgift2.c"\
+	"F:/Dokument/GitHub/xcc/src/ports.h"\
+	"F:/Dokument/GitHub/xcc/src/keyboardML15.h"\
+	"F:/Dokument/GitHub/xcc/src/displayML15.h"
+	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  \
+	-I"F:\Program\GMV\EducDist\bin\..\include" $(INC) -o"final\uppgift2.o12" "F:/Dokument/GitHub/xcc/src/uppgift2.c"
 !EICONF	Final

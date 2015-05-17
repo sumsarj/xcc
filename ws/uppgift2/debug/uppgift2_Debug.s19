@@ -1,0 +1,148 @@
+S0030000FC
+S10D1000CF2FFF1610DAA720FD75AC
+S123100A1B9D6982C6017B09C2C6D07B09C37909C287C76C80EC808C00062D092014EE80E1
+S123102A086E8020F0EC85E380B745E6007B09C320ECE6827B09C3E6827B09C31B833D1B3F
+S123104A94EC8E6B8B87C76C83EC838C00062D0B18200043EE83086E8320EEE68B873BECF6
+S123106A85C30001C80AB7453A18151A856B82CC0005A3831AE6E6826B00E68B873BEC85EA
+S123108AC30001C80AB7453A18156C80E68B87A3806B8B1820FFBD1A853416100A1B821B9D
+S12310AA8C3D1B9CCC09C06C8287C76C80E6F30002C1802416E6F30002C18025F8E6F3007D
+S12310CA02878300806C80EC80200220E01B843D1B9E1610AC6C80EC803B1610491B8220D6
+S10710EAF11B823D33
+S9031000EC
+SX:C:s:__start
+SX:A:M:_startup$F:/Dokument/GitHub/xcc/src/_startup.asm
+SX:C:T: typ2 l (4)
+SX:C:T: typ4 c (1)
+SX:C:T: typ6 s (2)
+SX:C:M:displayML15$F:/Dokument/GitHub/xcc/src/displayML15.c
+SX:C:S:F:displayML15:display_digits:_display_digits:(typ0)(typ16-displayML15)
+SX:C:S:L:displayML15:display_digits:digitsArrayPtr:5:(typ16-displayML15)
+SX:C:S:F:displayML15:__func__:___func__:(typ11)
+SX:C:S:L:displayML15:display_digits:write_byte:2:(typ4)
+SX:C:S:L:displayML15:display_digits:i:0:(typ11)
+SX:C:S:F:displayML15:display_dec:_display_dec:(typ0)(typ12)
+SX:C:S:L:displayML15:display_dec:segment:14:(typ12)
+SX:C:S:F:displayML15:__func__:___func__:(typ11)
+SX:C:S:L:displayML15:display_dec:segment_8:11:(typ4)
+SX:C:S:L:displayML15:display_dec:digitsArray:5:(typ18-displayML15)
+SX:C:S:L:displayML15:display_dec:i:3:(typ11)
+SX:C:T:  typ0 V (-1)
+SX:C:T:  typ1 L (4)
+SX:C:T:  typ2 l (4)
+SX:C:T:  typ3 C (1)
+SX:C:T:  typ4 c (1)
+SX:C:T:  typ5 S (2)
+SX:C:T:  typ6 s (2)
+SX:C:T:  typ7 g (4)
+SX:C:T:  typ8 G (4)
+SX:C:T:  typ9 h (4)
+SX:C:T:  typ10 R (2)
+SX:C:T:  typ11 I (2)
+SX:C:T:  typ12 i (2)
+SX:C:T:  typ13 E (2)
+SX:C:T:  typ14 F (2)
+SX:C:T:  typ15 P (2)
+SX:C:T:displayML15: typ16-displayML15 a *(typ4)
+SX:C:T:displayML15: typ18-displayML15 A (6)(typ4)
+SX:C:T: typ2 l (4)
+SX:C:T: typ4 c (1)
+SX:C:T: typ6 s (2)
+SX:C:M:keyboardML15$F:/Dokument/GitHub/xcc/src/keyboardML15.c
+SX:C:S:F:keyboardML15:get_key:_get_key:(typ12)
+SX:C:S:F:keyboardML15:__func__:___func__:(typ11)
+SX:C:S:L:keyboardML15:get_key:kbd_read:2:(typ16-keyboardML15)
+SX:C:S:L:keyboardML15:get_key:value:0:(typ12)
+SX:C:T:  typ0 V (-1)
+SX:C:T:  typ1 L (4)
+SX:C:T:  typ2 l (4)
+SX:C:T:  typ3 C (1)
+SX:C:T:  typ4 c (1)
+SX:C:T:  typ5 S (2)
+SX:C:T:  typ6 s (2)
+SX:C:T:  typ7 g (4)
+SX:C:T:  typ8 G (4)
+SX:C:T:  typ9 h (4)
+SX:C:T:  typ10 R (2)
+SX:C:T:  typ11 I (2)
+SX:C:T:  typ12 i (2)
+SX:C:T:  typ13 E (2)
+SX:C:T:  typ14 F (2)
+SX:C:T:  typ15 P (2)
+SX:C:T:keyboardML15: typ16-keyboardML15 a *(typ4)
+SX:C:T: typ2 l (4)
+SX:C:T: typ4 c (1)
+SX:C:T: typ6 s (2)
+SX:C:M:uppgift2$F:/Dokument/GitHub/xcc/src/uppgift2.c
+SX:C:S:F:uppgift2:main:_main:(typ11)
+SX:C:S:F:uppgift2:__func__:___func__:(typ11)
+SX:C:S:L:uppgift2:main:a:0:(typ12)
+SX:C:T:  typ0 V (-1)
+SX:C:T:  typ1 L (4)
+SX:C:T:  typ2 l (4)
+SX:C:T:  typ3 C (1)
+SX:C:T:  typ4 c (1)
+SX:C:T:  typ5 S (2)
+SX:C:T:  typ6 s (2)
+SX:C:T:  typ7 g (4)
+SX:C:T:  typ8 G (4)
+SX:C:T:  typ9 h (4)
+SX:C:T:  typ10 R (2)
+SX:C:T:  typ11 I (2)
+SX:C:T:  typ12 i (2)
+SX:C:T:  typ13 E (2)
+SX:C:T:  typ14 F (2)
+SX:C:T:  typ15 P (2)
+SX:C:T: typ2 l (4)
+SX:C:T: typ4 c (1)
+SX:C:T: typ6 s (2)
+SX:A:X:_startup:6:1000
+SX:A:X:_startup:7:1003
+SX:A:X:_startup:8:1006
+SX:A:X:_startup:9:1007
+SX:A:F:_startup:__start:1000:5
+SX:A:E:_startup:__start:1009:10
+SX:C:F:displayML15:_display_digits:0000100A:17
+SX:C:X:displayML15:17:1:100A
+SX:C:X:displayML15:18:27:100C
+SX:C:X:displayML15:20:23:100E
+SX:C:X:displayML15:21:25:1013
+SX:C:X:displayML15:22:23:1018
+SX:C:X:displayML15:23:6:101B
+SX:C:X:displayML15:23:13:101F
+SX:C:X:displayML15:23:21:1028
+SX:C:X:displayML15:24:43:102F
+SX:C:X:displayML15:26:32:103C
+SX:C:X:displayML15:27:32:1041
+SX:C:X:displayML15:30:1:1046
+SX:C:Z:displayML15:30:1:1046
+SX:C:E:displayML15:_display_digits:00001049:30
+SX:C:F:displayML15:_display_dec:00001049:33
+SX:C:X:displayML15:33:1:1049
+SX:C:X:displayML15:34:26:104B
+SX:C:X:displayML15:37:6:104F
+SX:C:X:displayML15:37:12:1053
+SX:C:X:displayML15:37:16:105E
+SX:C:X:displayML15:38:41:1065
+SX:C:X:displayML15:39:44:1084
+SX:C:X:displayML15:41:31:10A1
+SX:C:X:displayML15:42:1:10A9
+SX:C:Z:displayML15:42:1:10A9
+SX:C:E:displayML15:_display_dec:000010AC:42
+SX:C:F:keyboardML15:_get_key:000010AC:7
+SX:C:X:keyboardML15:7:1:10AC
+SX:C:X:keyboardML15:9:23:10AE
+SX:C:X:keyboardML15:10:7:10B7
+SX:C:X:keyboardML15:11:4:10B7
+SX:C:X:keyboardML15:12:9:10BF
+SX:C:X:keyboardML15:14:42:10C7
+SX:C:X:keyboardML15:18:1:10D7
+SX:C:Z:keyboardML15:18:1:10D7
+SX:C:E:keyboardML15:_get_key:000010DA:18
+SX:C:F:uppgift2:_main:000010DA:5
+SX:C:X:uppgift2:5:1:10DA
+SX:C:X:uppgift2:7:7:10DC
+SX:C:X:uppgift2:8:14:10DC
+SX:C:X:uppgift2:9:14:10E1
+SX:C:X:uppgift2:13:1:10EB
+SX:C:Z:uppgift2:13:1:10EB
+SX:C:E:uppgift2:_main:000010EE:13
