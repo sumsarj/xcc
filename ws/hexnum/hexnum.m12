@@ -47,7 +47,6 @@
 #PROJECT FILES SECTION
 
 FILES= \
-	"..\..\..\..\..\Program\GMV\EducDist\src\startup\xcc12\_startup.s12" "" "1"  \
 	"..\..\src\hexnum.c" "" "1" 
 #-----------------------------------------------
 #PROJECT OPTIONS SECTION
@@ -65,7 +64,6 @@ LNFLAGS=-g -i default.lsc
 #OBJECT FILES SECTION
 
 OBJ= \
-	"debug\_startup.o12" \
 	"debug\hexnum.o12"
 #-----------------------------------------------
 #DEFINES/UNDEFINES SECTION
@@ -113,27 +111,23 @@ LIBPATH=
 
 # Application
 "debug\hexnum_Debug.s19": $(OBJ)
-	LINK -o"debug\hexnum_Debug.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -L"F:\Program\GMV\EducDist\bin\..\lib\xcc12" -l"F:\Program\GMV\EducDist\bin\..\lib\xcc12\libccd.e12"  $(OBJ)
+	LINK -o"debug\hexnum_Debug.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -L"D:\Program\EducDist\bin\..\lib\xcc12" -l"D:\Program\EducDist\bin\..\lib\xcc12\libccd.e12"  $(OBJ)
 #-----------------------------------------------
 
 
 # Clean
 clean:
 	RMFI "debug\hexnum_Debug.s19"
-	RMFI "debug\_startup.o12"
 	RMFI "debug\hexnum.o12"
 #-----------------------------------------------
 
 
 # Dependencies and their build rules
 
-"debug\_startup.o12":	\
-	"F:/Program/GMV/EducDist/src/startup/xcc12/_startup.s12"
-	ASSM  $(ASFLAGS) $(ASMDEF) -o"debug\_startup.o12" "F:/Program/GMV/EducDist/src/startup/xcc12/_startup.s12"
 "debug\hexnum.o12":	\
-	"F:/Dokument/GitHub/xcc/src/hexnum.c"
+	"D:/Dokument/GitHub/xcc/src/hexnum.c"
 	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  \
-	-I"F:\Program\GMV\EducDist\bin\..\include" $(INC) -o"debug\hexnum.o12" "F:/Dokument/GitHub/xcc/src/hexnum.c"
+	-I"D:\Program\EducDist\bin\..\include" $(INC) -o"debug\hexnum.o12" "D:/Dokument/GitHub/xcc/src/hexnum.c"
 !EICONF	Debug
 
 !IFCONF	Final
@@ -149,7 +143,6 @@ LNFLAGS=-i default.lsc
 #OBJECT FILES SECTION
 
 OBJ= \
-	"final\_startup.o12" \
 	"final\hexnum.o12"
 #-----------------------------------------------
 #DEFINES/UNDEFINES SECTION
@@ -193,25 +186,21 @@ LIBPATH=
 
 # Application
 "final\hexnum_Final.s19": $(OBJ)
-	LINK -o"final\hexnum_Final.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -L"F:\Program\GMV\EducDist\bin\..\lib\xcc12" -l"F:\Program\GMV\EducDist\bin\..\lib\xcc12\libcc.e12"  $(OBJ)
+	LINK -o"final\hexnum_Final.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -L"D:\Program\EducDist\bin\..\lib\xcc12" -l"D:\Program\EducDist\bin\..\lib\xcc12\libcc.e12"  $(OBJ)
 #-----------------------------------------------
 
 
 # Clean
 clean:
 	RMFI "final\hexnum_Final.s19"
-	RMFI "final\_startup.o12"
 	RMFI "final\hexnum.o12"
 #-----------------------------------------------
 
 
 # Dependencies and their build rules
 
-"final\_startup.o12":	\
-	"F:/Program/GMV/EducDist/src/startup/xcc12/_startup.s12"
-	ASSM  $(ASFLAGS) $(ASMDEF) -o"final\_startup.o12" "F:/Program/GMV/EducDist/src/startup/xcc12/_startup.s12"
 "final\hexnum.o12":	\
-	"F:/Dokument/GitHub/xcc/src/hexnum.c"
+	"D:/Dokument/GitHub/xcc/src/hexnum.c"
 	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  \
-	-I"F:\Program\GMV\EducDist\bin\..\include" $(INC) -o"final\hexnum.o12" "F:/Dokument/GitHub/xcc/src/hexnum.c"
+	-I"D:\Program\EducDist\bin\..\include" $(INC) -o"final\hexnum.o12" "D:/Dokument/GitHub/xcc/src/hexnum.c"
 !EICONF	Final

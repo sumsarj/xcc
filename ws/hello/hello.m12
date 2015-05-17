@@ -42,13 +42,12 @@
 ##OTYPE=1
 #-----------------------------------------------
 #OPEN FILE SECTION
-##OF "..\..\src\hello.c"
 #-----------------------------------------------
 #PROJECT FILES SECTION
 
 FILES= \
-	"..\..\..\..\..\Program\GMV\EducDist\src\startup\xcc12\_startup.s12" "" "1"  \
-	"..\..\src\hello.c" "" "1" 
+	"..\..\src\hello.c" "" "1"  \
+	"..\..\..\..\..\Program\EducDist\src\startup\xcc12\_startup.s12" "" "1" 
 #-----------------------------------------------
 #PROJECT OPTIONS SECTION
 
@@ -65,8 +64,8 @@ LNFLAGS=-g -i default.lsc
 #OBJECT FILES SECTION
 
 OBJ= \
-	"debug\_startup.o12" \
-	"debug\hello.o12"
+	"debug\hello.o12" \
+	"debug\_startup.o12"
 #-----------------------------------------------
 #DEFINES/UNDEFINES SECTION
 
@@ -113,27 +112,27 @@ LIBPATH=
 
 # Application
 "debug\hello_Debug.s19": $(OBJ)
-	LINK -o"debug\hello_Debug.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -L"F:\Program\GMV\EducDist\bin\..\lib\xcc12" -l"F:\Program\GMV\EducDist\bin\..\lib\xcc12\libccd.e12"  $(OBJ)
+	LINK -o"debug\hello_Debug.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -L"D:\Program\EducDist\bin\..\lib\xcc12" -l"D:\Program\EducDist\bin\..\lib\xcc12\libccd.e12"  $(OBJ)
 #-----------------------------------------------
 
 
 # Clean
 clean:
 	RMFI "debug\hello_Debug.s19"
-	RMFI "debug\_startup.o12"
 	RMFI "debug\hello.o12"
+	RMFI "debug\_startup.o12"
 #-----------------------------------------------
 
 
 # Dependencies and their build rules
 
-"debug\_startup.o12":	\
-	"F:/Program/GMV/EducDist/src/startup/xcc12/_startup.s12"
-	ASSM  $(ASFLAGS) $(ASMDEF) -o"debug\_startup.o12" "F:/Program/GMV/EducDist/src/startup/xcc12/_startup.s12"
 "debug\hello.o12":	\
-	"F:/Dokument/GitHub/xcc/src/hello.c"
+	"D:/Dokument/GitHub/xcc/src/hello.c"
 	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  \
-	-I"F:\Program\GMV\EducDist\bin\..\include" $(INC) -o"debug\hello.o12" "F:/Dokument/GitHub/xcc/src/hello.c"
+	-I"D:\Program\EducDist\bin\..\include" $(INC) -o"debug\hello.o12" "D:/Dokument/GitHub/xcc/src/hello.c"
+"debug\_startup.o12":	\
+	"D:/Program/EducDist/src/startup/xcc12/_startup.s12"
+	ASSM  $(ASFLAGS) $(ASMDEF) -o"debug\_startup.o12" "D:/Program/EducDist/src/startup/xcc12/_startup.s12"
 !EICONF	Debug
 
 !IFCONF	Final
@@ -149,8 +148,8 @@ LNFLAGS=-i default.lsc
 #OBJECT FILES SECTION
 
 OBJ= \
-	"final\_startup.o12" \
-	"final\hello.o12"
+	"final\hello.o12" \
+	"final\_startup.o12"
 #-----------------------------------------------
 #DEFINES/UNDEFINES SECTION
 
@@ -193,25 +192,25 @@ LIBPATH=
 
 # Application
 "final\hello_Final.s19": $(OBJ)
-	LINK -o"final\hello_Final.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -L"F:\Program\GMV\EducDist\bin\..\lib\xcc12" -l"F:\Program\GMV\EducDist\bin\..\lib\xcc12\libcc.e12"  $(OBJ)
+	LINK -o"final\hello_Final.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -L"D:\Program\EducDist\bin\..\lib\xcc12" -l"D:\Program\EducDist\bin\..\lib\xcc12\libcc.e12"  $(OBJ)
 #-----------------------------------------------
 
 
 # Clean
 clean:
 	RMFI "final\hello_Final.s19"
-	RMFI "final\_startup.o12"
 	RMFI "final\hello.o12"
+	RMFI "final\_startup.o12"
 #-----------------------------------------------
 
 
 # Dependencies and their build rules
 
-"final\_startup.o12":	\
-	"F:/Program/GMV/EducDist/src/startup/xcc12/_startup.s12"
-	ASSM  $(ASFLAGS) $(ASMDEF) -o"final\_startup.o12" "F:/Program/GMV/EducDist/src/startup/xcc12/_startup.s12"
 "final\hello.o12":	\
-	"F:/Dokument/GitHub/xcc/src/hello.c"
+	"D:/Dokument/GitHub/xcc/src/hello.c"
 	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  \
-	-I"F:\Program\GMV\EducDist\bin\..\include" $(INC) -o"final\hello.o12" "F:/Dokument/GitHub/xcc/src/hello.c"
+	-I"D:\Program\EducDist\bin\..\include" $(INC) -o"final\hello.o12" "D:/Dokument/GitHub/xcc/src/hello.c"
+"final\_startup.o12":	\
+	"D:/Program/EducDist/src/startup/xcc12/_startup.s12"
+	ASSM  $(ASFLAGS) $(ASMDEF) -o"final\_startup.o12" "D:/Program/EducDist/src/startup/xcc12/_startup.s12"
 !EICONF	Final
