@@ -1,0 +1,160 @@
+S0030000FC
+S10D1000CF2FFF161055A720FD6343
+S123100AA7C6017B003BC680FA00387B003887C77C10F87C10F6FC104E7C3FF01610523D65
+S123102AA7FD10F6FC10F8C300012401027D10F67C10F8C680FA00377B00373DA7FD10F6F2
+S123104AFC10F83D16102A0B10EF3DA716100A1610463B1610A41B8220F53D1B9D6982C60A
+S123106A017B09C2C6D07B09C37909C287C76C80EC808C00062D092014EE80086E8020F0E4
+S123108AEC85E380B745E6007B09C320ECE6827B09C3E6827B09C31B833D1B9587C76C8313
+S12310AAEC838C00062D0B18200035EE83086E8320EEEC8DCE000A18101A856B82CC00052E
+S12310CAA3831AE6E6826B00EC8DCE000A18106C80EC8DA380CE000A18106E8D1820FFCB0B
+S10F10EA1A85341610651B821B8B3D38E0
+S10710F600000000F2
+S9031000EC
+SX:C:s:__start
+SX:A:M:_startup$D:/Dokument/GitHub/xcc/src/_startup.asm
+SX:C:T: typ2 l (4)
+SX:C:T: typ4 c (1)
+SX:C:T: typ6 s (2)
+SX:C:M:clock$D:/Dokument/GitHub/xcc/src/clock.c
+SX:C:T:  typ0 V (-1)
+SX:C:T:  typ1 L (4)
+SX:C:T:  typ2 l (4)
+SX:C:T:  typ3 C (1)
+SX:C:T:  typ4 c (1)
+SX:C:T:  typ5 S (2)
+SX:C:T:  typ6 s (2)
+SX:C:T:  typ7 g (4)
+SX:C:T:  typ8 G (4)
+SX:C:T:  typ9 h (4)
+SX:C:T:  typ10 R (2)
+SX:C:T:  typ11 I (2)
+SX:C:T:  typ12 i (2)
+SX:C:T:  typ13 E (2)
+SX:C:T:  typ14 F (2)
+SX:C:T:  typ15 P (2)
+SX:C:T: typ2 l (4)
+SX:C:T: typ4 c (1)
+SX:C:T: typ6 s (2)
+SX:A:M:avbrott$D:/Dokument/GitHub/xcc/src/avbrott.asm
+SX:C:T: typ2 l (4)
+SX:C:T: typ4 c (1)
+SX:C:T: typ6 s (2)
+SX:C:M:uppgift3$D:/Dokument/GitHub/xcc/src/uppgift3.c
+SX:C:T:  typ0 V (-1)
+SX:C:T:  typ1 L (4)
+SX:C:T:  typ2 l (4)
+SX:C:T:  typ3 C (1)
+SX:C:T:  typ4 c (1)
+SX:C:T:  typ5 S (2)
+SX:C:T:  typ6 s (2)
+SX:C:T:  typ7 g (4)
+SX:C:T:  typ8 G (4)
+SX:C:T:  typ9 h (4)
+SX:C:T:  typ10 R (2)
+SX:C:T:  typ11 I (2)
+SX:C:T:  typ12 i (2)
+SX:C:T:  typ13 E (2)
+SX:C:T:  typ14 F (2)
+SX:C:T:  typ15 P (2)
+SX:C:T: typ2 l (4)
+SX:C:T: typ4 c (1)
+SX:C:T: typ6 s (2)
+SX:C:M:displayML15$D:/Dokument/GitHub/xcc/src/displayML15.c
+SX:C:S:F:displayML15:display_digits:_display_digits:(typ0)(typ16-displayML15)
+SX:C:S:L:displayML15:display_digits:digitsArrayPtr:5:(typ16-displayML15)
+SX:C:S:F:displayML15:__func__:___func__:(typ11)
+SX:C:S:L:displayML15:display_digits:write_byte:2:(typ4)
+SX:C:S:L:displayML15:display_digits:i:0:(typ11)
+SX:C:S:F:displayML15:display_dec:_display_dec:(typ0)(typ12)
+SX:C:S:L:displayML15:display_dec:segment:13:(typ12)
+SX:C:S:F:displayML15:__func__:___func__:(typ11)
+SX:C:S:L:displayML15:display_dec:digitsArray:5:(typ18-displayML15)
+SX:C:S:L:displayML15:display_dec:i:3:(typ11)
+SX:C:T:  typ0 V (-1)
+SX:C:T:  typ1 L (4)
+SX:C:T:  typ2 l (4)
+SX:C:T:  typ3 C (1)
+SX:C:T:  typ4 c (1)
+SX:C:T:  typ5 S (2)
+SX:C:T:  typ6 s (2)
+SX:C:T:  typ7 g (4)
+SX:C:T:  typ8 G (4)
+SX:C:T:  typ9 h (4)
+SX:C:T:  typ10 R (2)
+SX:C:T:  typ11 I (2)
+SX:C:T:  typ12 i (2)
+SX:C:T:  typ13 E (2)
+SX:C:T:  typ14 F (2)
+SX:C:T:  typ15 P (2)
+SX:C:T:displayML15: typ16-displayML15 a *(typ4)
+SX:C:T:displayML15: typ18-displayML15 A (6)(typ4)
+SX:C:T: typ2 l (4)
+SX:C:T: typ4 c (1)
+SX:C:T: typ6 s (2)
+SX:A:X:_startup:6:1000
+SX:A:X:_startup:7:1003
+SX:A:X:_startup:8:1006
+SX:A:X:_startup:9:1007
+SX:A:F:_startup:__start:1000:5
+SX:A:E:_startup:__start:1009:10
+SX:C:F:clock:_init_clock:0000100A:9
+SX:C:X:clock:9:1:100A
+SX:C:X:clock:11:38:100B
+SX:C:X:clock:14:40:1010
+SX:C:X:clock:16:12:1018
+SX:C:X:clock:18:47:1020
+SX:C:X:clock:20:7:1026
+SX:C:X:clock:22:1:1029
+SX:C:Z:clock:22:1:1029
+SX:C:E:clock:_init_clock:0000102A:22
+SX:C:F:clock:_clock_inter:0000102A:24
+SX:C:X:clock:24:1:102A
+SX:C:X:clock:25:8:102B
+SX:C:X:clock:26:40:103D
+SX:C:X:clock:27:1:1045
+SX:C:Z:clock:27:1:1045
+SX:C:E:clock:_clock_inter:00001046:27
+SX:C:F:clock:_get_time:00001046:28
+SX:C:X:clock:28:1:1046
+SX:C:X:clock:31:1:104D
+SX:C:Z:clock:31:1:104D
+SX:C:E:clock:_get_time:0000104E:31
+SX:A:X:avbrott:5:104E
+SX:A:X:avbrott:6:1051
+SX:A:X:avbrott:9:1052
+SX:A:X:avbrott:10:1054
+SX:C:F:uppgift3:_main:00001055:8
+SX:C:X:uppgift3:8:1:1055
+SX:C:X:uppgift3:9:12:1056
+SX:C:X:uppgift3:10:7:1059
+SX:C:X:uppgift3:11:38:1059
+SX:C:X:uppgift3:14:1:1064
+SX:C:Z:uppgift3:14:1:1064
+SX:C:E:uppgift3:_main:00001065:14
+SX:C:F:displayML15:_display_digits:00001065:17
+SX:C:X:displayML15:17:1:1065
+SX:C:X:displayML15:18:27:1067
+SX:C:X:displayML15:20:23:1069
+SX:C:X:displayML15:21:25:106E
+SX:C:X:displayML15:22:23:1073
+SX:C:X:displayML15:23:6:1076
+SX:C:X:displayML15:23:13:107A
+SX:C:X:displayML15:23:21:1083
+SX:C:X:displayML15:24:43:108A
+SX:C:X:displayML15:26:32:1097
+SX:C:X:displayML15:27:32:109C
+SX:C:X:displayML15:30:1:10A1
+SX:C:Z:displayML15:30:1:10A1
+SX:C:E:displayML15:_display_digits:000010A4:30
+SX:C:F:displayML15:_display_dec:000010A4:33
+SX:C:X:displayML15:33:1:10A4
+SX:C:X:displayML15:37:6:10A6
+SX:C:X:displayML15:37:12:10AA
+SX:C:X:displayML15:37:16:10B5
+SX:C:X:displayML15:38:31:10BC
+SX:C:X:displayML15:39:35:10D2
+SX:C:X:displayML15:41:31:10EA
+SX:C:X:displayML15:42:1:10F2
+SX:C:Z:displayML15:42:1:10F2
+SX:C:E:displayML15:_display_dec:000010F5:42
+SX:C:S:G:clock:counter:_counter:000010F6:(typ2)

@@ -1,13 +1,14 @@
+#ifndef port
 #include "ports.h"
 #define port
-#include "keyboardML15.h"
+#endif
+#include "clock.h"
 #include "displayML15.h"
+
 int main(){
-	unsigned int a;
+	init_clock();
 	while(1){
-	a = get_key();
-	display_dec(a);
+		display_dec((unsigned int)get_time());
 	}
 	return 0;
-	
 }

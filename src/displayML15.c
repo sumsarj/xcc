@@ -31,13 +31,12 @@ void display_digits(unsigned char *digitsArrayPtr){
 
 
 void display_dec(unsigned int segment){
-	unsigned char segment_8 = segment;
+	//unsigned char segment_8 = segment;
 	unsigned char digitsArray[6];
 	int i;
 	for(i = 0;i<6;i++){
-		digitsArray[5-i] = segment_8%(10^(i+1));
-		segment_8 = segment_8-segment_8%(10^(i+1));
+		digitsArray[5-i] = segment%10;
+		segment = (segment-segment%10)/10;
 	}
 	display_digits(&digitsArray[0]);
 }
-

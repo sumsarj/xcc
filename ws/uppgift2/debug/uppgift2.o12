@@ -8,7 +8,7 @@ C:text	F11B823D
 RG:text:uppgift2:00000003:O:W:_get_key:39
 RG:text:uppgift2:0000000B:O:W:_display_dec:45
 G:text:uppgift2:00000000:_main
-SY:C:M:uppgift2$F:/Dokument/GitHub/xcc/src/uppgift2.c
+SY:C:M:uppgift2$D:/Dokument/GitHub/xcc/src/uppgift2.c
 SY:C:F:uppgift2:text:_main:00000000:5
 SY:C:X:uppgift2:5:1:text:0
 SY:C:S:F:uppgift2:main:_main:(typ11)

@@ -1,0 +1,39 @@
+mod:uppgift3:O12:uppgift3.o12
+seg:text:16
+seg:bss:0
+seg:data:0
+seg:rodata:0
+C:text	A71600001600003B1600001B8220F53D
+RG:text:uppgift3:00000002:O:W:_init_clock:33
+RG:text:uppgift3:00000005:O:W:_get_time:39
+RG:text:uppgift3:00000009:O:W:_display_dec:41
+G:text:uppgift3:00000000:_main
+SY:C:M:uppgift3$D:/Dokument/GitHub/xcc/src/uppgift3.c
+SY:C:F:uppgift3:text:_main:00000000:8
+SY:C:X:uppgift3:8:1:text:0
+SY:C:X:uppgift3:9:12:text:1
+SY:C:X:uppgift3:10:7:text:4
+SY:C:X:uppgift3:11:38:text:4
+SY:C:X:uppgift3:14:1:text:F
+SY:C:Z:uppgift3:14:1:text:F
+SY:C:E:uppgift3:text:_main:00000010:14
+SY:C:T:  typ0 V (-1)
+SY:C:T:  typ1 L (4)
+SY:C:T:  typ2 l (4)
+SY:C:T:  typ3 C (1)
+SY:C:T:  typ4 c (1)
+SY:C:T:  typ5 S (2)
+SY:C:T:  typ6 s (2)
+SY:C:T:  typ7 g (4)
+SY:C:T:  typ8 G (4)
+SY:C:T:  typ9 h (4)
+SY:C:T:  typ10 R (2)
+SY:C:T:  typ11 I (2)
+SY:C:T:  typ12 i (2)
+SY:C:T:  typ13 E (2)
+SY:C:T:  typ14 F (2)
+SY:C:T:  typ15 P (2)
+SY:C:T: typ2 l (4)
+SY:C:T: typ4 c (1)
+SY:C:T: typ6 s (2)
+e

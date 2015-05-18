@@ -1,0 +1,15 @@
+mod:avbrott:O12:avbrott.o12
+seg:text:7
+C:text	1600000B10EF3D
+RG:text:avbrott:00000001:O:W:_clock_inter:5
+G:text:avbrott:00000004:_myCLI
+G:text:avbrott:00000000:_clock_inter_asm
+SY:A:M:avbrott$D:/Dokument/GitHub/xcc/src/avbrott.asm
+SY:A:X:avbrott:5:text:0
+SY:A:X:avbrott:6:text:3
+SY:A:X:avbrott:9:text:4
+SY:A:X:avbrott:10:text:6
+SY:C:T: typ2 l (4)
+SY:C:T: typ4 c (1)
+SY:C:T: typ6 s (2)
+e

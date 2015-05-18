@@ -4,7 +4,6 @@
 #
 #-----------------------------------------------
 #SETTINGS SECTION
-##CSIMSET=".\pardip.hc12sim"
 ##EXTMAKEFILE=""
 ##EXTMAKEFILEPARAM=""
 #+[BackCol(0)]=
@@ -47,18 +46,25 @@
 #PROJECT FILES SECTION
 
 FILES= \
+	"..\..\src\drill.c" "" "1"  \
+	"..\..\src\drill.h" "" "1"  \
 	"..\..\src\_startup.asm" "" "1"  \
-	"..\..\src\main.c" "" "1"  \
-	"..\..\src\ports.h" "" "1" 
+	"..\..\src\ports.h" "" "1"  \
+	"..\..\src\avbrott.asm" "" "1"  \
+	"..\..\src\clock.c" "" "1"  \
+	"..\..\src\clock.h" "" "1"  \
+	"..\..\src\keyboardML15.c" "" "1"  \
+	"..\..\src\keyboardML15.h" "" "1"  \
+	"..\..\src\main.c" "" "1" 
 #-----------------------------------------------
 #PROJECT OPTIONS SECTION
 
 !IFCONF	Debug
-##TARGETNAME="uppgift1_Debug"
+##TARGETNAME="uppgift4_Debug"
 ##OBJDIR="debug"
 ##TARGDIR="debug"
 ##STDINCPATH=0
-##STDLIBPATH=0
+##STDLIBPATH=1
 ASFLAGS=-g -e
 CCFLAGS=-g -w4 -O
 LNFLAGS=-g -i default.lsc
@@ -66,7 +72,11 @@ LNFLAGS=-g -i default.lsc
 #OBJECT FILES SECTION
 
 OBJ= \
+	"debug\drill.o12" \
 	"debug\_startup.o12" \
+	"debug\avbrott.o12" \
+	"debug\clock.o12" \
+	"debug\keyboardML15.o12" \
 	"debug\main.o12"
 #-----------------------------------------------
 #DEFINES/UNDEFINES SECTION
@@ -84,7 +94,10 @@ UNDEFINES=
 
 INCLUDES=
 
-LIBRARIES=
+LIBRARIES= \
+	"libcd.e12" \
+	"libed.e12" \
+	"librtkd.e12"
 
 LIBRARYPATHS=
 #-----------------------------------------------
@@ -100,32 +113,59 @@ DEF= \
 
 UNDEF=
 
-LIB=
+LIB= \
+	-l"libcd.e12" \
+	-l"libed.e12" \
+	-l"librtkd.e12"
 
 LIBPATH=
 #-----------------------------------------------
 #RULES SECTION CONFIGURATION 
 
 # Application
-"debug\uppgift1_Debug.s19": $(OBJ)
-	LINK -o"debug\uppgift1_Debug.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -l"D:\Program\EducDist\bin\..\lib\xcc12\libccd.e12"  $(OBJ)
+"debug\uppgift4_Debug.s19": $(OBJ)
+	LINK -o"debug\uppgift4_Debug.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -L"D:\Program\EducDist\bin\..\lib\xcc12" -l"D:\Program\EducDist\bin\..\lib\xcc12\libccd.e12"  $(OBJ)
 #-----------------------------------------------
 
 
 # Clean
 clean:
-	RMFI "debug\uppgift1_Debug.s19"
+	RMFI "debug\uppgift4_Debug.s19"
+	RMFI "debug\drill.o12"
+	RMFI "debug\drill.o12"
 	RMFI "debug\_startup.o12"
-	RMFI "debug\main.o12"
 	RMFI "debug\ports.o12"
+	RMFI "debug\avbrott.o12"
+	RMFI "debug\clock.o12"
+	RMFI "debug\clock.o12"
+	RMFI "debug\keyboardML15.o12"
+	RMFI "debug\keyboardML15.o12"
+	RMFI "debug\main.o12"
 #-----------------------------------------------
 
 
 # Dependencies and their build rules
 
+"debug\drill.o12":	\
+	"D:/Dokument/GitHub/xcc/src/drill.c"\
+	"D:/Dokument/GitHub/xcc/src/ports.h"\
+	"D:/Dokument/GitHub/xcc/src/drill.h"
+	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  $(INC) -o"debug\drill.o12" "D:/Dokument/GitHub/xcc/src/drill.c"
 "debug\_startup.o12":	\
 	"D:/Dokument/GitHub/xcc/src/_startup.asm"
 	ASSM  $(ASFLAGS) $(ASMDEF) -o"debug\_startup.o12" "D:/Dokument/GitHub/xcc/src/_startup.asm"
+"debug\avbrott.o12":	\
+	"D:/Dokument/GitHub/xcc/src/avbrott.asm"
+	ASSM  $(ASFLAGS) $(ASMDEF) -o"debug\avbrott.o12" "D:/Dokument/GitHub/xcc/src/avbrott.asm"
+"debug\clock.o12":	\
+	"D:/Dokument/GitHub/xcc/src/clock.c"\
+	"D:/Dokument/GitHub/xcc/src/ports.h"\
+	"D:/Dokument/GitHub/xcc/src/clock.h"
+	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  $(INC) -o"debug\clock.o12" "D:/Dokument/GitHub/xcc/src/clock.c"
+"debug\keyboardML15.o12":	\
+	"D:/Dokument/GitHub/xcc/src/keyboardML15.c"\
+	"D:/Dokument/GitHub/xcc/src/ports.h"
+	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  $(INC) -o"debug\keyboardML15.o12" "D:/Dokument/GitHub/xcc/src/keyboardML15.c"
 "debug\main.o12":	\
 	"D:/Dokument/GitHub/xcc/src/main.c"\
 	"D:/Dokument/GitHub/xcc/src/ports.h"
@@ -133,7 +173,7 @@ clean:
 !EICONF	Debug
 
 !IFCONF	Final
-##TARGETNAME="uppgift1_Final"
+##TARGETNAME="uppgift4_Final"
 ##OBJDIR="final"
 ##TARGDIR="final"
 ##STDINCPATH=1
@@ -145,7 +185,11 @@ LNFLAGS=-i default.lsc
 #OBJECT FILES SECTION
 
 OBJ= \
+	"final\drill.o12" \
 	"final\_startup.o12" \
+	"final\avbrott.o12" \
+	"final\clock.o12" \
+	"final\keyboardML15.o12" \
 	"final\main.o12"
 #-----------------------------------------------
 #DEFINES/UNDEFINES SECTION
@@ -188,25 +232,52 @@ LIBPATH=
 #RULES SECTION CONFIGURATION 
 
 # Application
-"final\uppgift1_Final.s19": $(OBJ)
-	LINK -o"final\uppgift1_Final.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -L"D:\Program\EducDist\bin\..\lib\xcc12" -l"D:\Program\EducDist\bin\..\lib\xcc12\libcc.e12"  $(OBJ)
+"final\uppgift4_Final.s19": $(OBJ)
+	LINK -o"final\uppgift4_Final.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -L"D:\Program\EducDist\bin\..\lib\xcc12" -l"D:\Program\EducDist\bin\..\lib\xcc12\libcc.e12"  $(OBJ)
 #-----------------------------------------------
 
 
 # Clean
 clean:
-	RMFI "final\uppgift1_Final.s19"
+	RMFI "final\uppgift4_Final.s19"
+	RMFI "final\drill.o12"
+	RMFI "final\drill.o12"
 	RMFI "final\_startup.o12"
-	RMFI "final\main.o12"
 	RMFI "final\ports.o12"
+	RMFI "final\avbrott.o12"
+	RMFI "final\clock.o12"
+	RMFI "final\clock.o12"
+	RMFI "final\keyboardML15.o12"
+	RMFI "final\keyboardML15.o12"
+	RMFI "final\main.o12"
 #-----------------------------------------------
 
 
 # Dependencies and their build rules
 
+"final\drill.o12":	\
+	"D:/Dokument/GitHub/xcc/src/drill.c"\
+	"D:/Dokument/GitHub/xcc/src/ports.h"\
+	"D:/Dokument/GitHub/xcc/src/drill.h"
+	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  \
+	-I"D:\Program\EducDist\bin\..\include" $(INC) -o"final\drill.o12" "D:/Dokument/GitHub/xcc/src/drill.c"
 "final\_startup.o12":	\
 	"D:/Dokument/GitHub/xcc/src/_startup.asm"
 	ASSM  $(ASFLAGS) $(ASMDEF) -o"final\_startup.o12" "D:/Dokument/GitHub/xcc/src/_startup.asm"
+"final\avbrott.o12":	\
+	"D:/Dokument/GitHub/xcc/src/avbrott.asm"
+	ASSM  $(ASFLAGS) $(ASMDEF) -o"final\avbrott.o12" "D:/Dokument/GitHub/xcc/src/avbrott.asm"
+"final\clock.o12":	\
+	"D:/Dokument/GitHub/xcc/src/clock.c"\
+	"D:/Dokument/GitHub/xcc/src/ports.h"\
+	"D:/Dokument/GitHub/xcc/src/clock.h"
+	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  \
+	-I"D:\Program\EducDist\bin\..\include" $(INC) -o"final\clock.o12" "D:/Dokument/GitHub/xcc/src/clock.c"
+"final\keyboardML15.o12":	\
+	"D:/Dokument/GitHub/xcc/src/keyboardML15.c"\
+	"D:/Dokument/GitHub/xcc/src/ports.h"
+	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  \
+	-I"D:\Program\EducDist\bin\..\include" $(INC) -o"final\keyboardML15.o12" "D:/Dokument/GitHub/xcc/src/keyboardML15.c"
 "final\main.o12":	\
 	"D:/Dokument/GitHub/xcc/src/main.c"\
 	"D:/Dokument/GitHub/xcc/src/ports.h"

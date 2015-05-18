@@ -1,4 +1,4 @@
-QLD (Version 4.8.1)- Link/Load Summary: 'debug\uppgift2_Debug.s19'
+QLD (Version 4.8.1)- Link/Load Summary: 'debug\uppgift3_Debug.s19'
 SCRIPT FILES FROM THE FOLLOWING PATH(S):
   'D:/Program/EducDist/config/xcc12'
 
@@ -7,6 +7,9 @@ SCRIPT READ FROM THE FOLLOWING FILE(S):
 
 ---------------------------
  SEARCHED LIBRARIES:
+ 'D:/Program/EducDist/lib/xcc12/libcd.e12'
+ 'D:/Program/EducDist/lib/xcc12/libed.e12'
+ 'D:/Program/EducDist/lib/xcc12/librtkd.e12'
  'D:/Program/EducDist/lib/xcc12/libccd.e12'
 
 ---------------------------
@@ -14,9 +17,10 @@ SCRIPT READ FROM THE FOLLOWING FILE(S):
 ---------------------------
  GROUPS AND SEGMENTS:
 
-  GROUP 'test_group', READ/WRITE ,allocation to: 00001000 - 000010E5, (size: 230 Bytes)
+  GROUP 'test_group', READ/WRITE ,allocation to: 00001000 - 000010F9, (size: 250 Bytes)
    00001000 00001009 'init'
-   0000100A 000010E5 'text'
+   0000100A 000010F5 'text'
+   000010F6 000010F9 'bss'
 
   GROUP 'interrupt_vectors', READ/WRITE
    NO SEGMENTS
@@ -26,19 +30,19 @@ SCRIPT READ FROM THE FOLLOWING FILE(S):
 ---------------------------
 LINKER DEFINED CONSTANTS:
    __rom_code_enabled = 0
-   __heap_start = 00000000
+   __heap_start = 000010FA
   from segment 'text'
    0000100A '__text__start'
-   000010E6 '__text__end'
-   000000DC '__text__size'
+   000010F6 '__text__end'
+   000000EC '__text__size'
   from segment 'init'
    00001000 '__init__start'
    0000100A '__init__end'
    0000000A '__init__size'
   from segment 'bss'
-   00000000 '__bss__start'
-   00000000 '__bss__end'
-   00000000 '__bss__size'
+   000010F6 '__bss__start'
+   000010FA '__bss__end'
+   00000004 '__bss__size'
   from segment 'data'
    00000000 '__data__start'
    00000000 '__data__end'
@@ -55,17 +59,26 @@ GLOBAL SYMBOL(S):
    00001006 '_exit'
    00001000 '__start'
 
+ in module: 'clock' of type 'O12' defined in file 'clock.o12'
+  in segment: 'text'
+   0000100A '_init_clock'
+   00001046 '_get_time'
+   0000102A '_clock_inter'
+  in segment: 'bss'
+   000010F6 '_counter'
+
+ in module: 'avbrott' of type 'O12' defined in file 'avbrott.o12'
+  in segment: 'text'
+   00001052 '_myCLI'
+   0000104E '_clock_inter_asm'
+
+ in module: 'uppgift3' of type 'O12' defined in file 'uppgift3.o12'
+  in segment: 'text'
+   00001055 '_main'
+
  in module: 'displayML15' of type 'O12' defined in file 'displayML15.o12'
   in segment: 'text'
-   0000100A '_display_digits'
-   00001049 '_display_dec'
-
- in module: 'keyboardML15' of type 'O12' defined in file 'keyboardML15.o12'
-  in segment: 'text'
-   000010A3 '_get_key'
-
- in module: 'uppgift2' of type 'O12' defined in file 'uppgift2.o12'
-  in segment: 'text'
-   000010D1 '_main'
+   00001065 '_display_digits'
+   000010A4 '_display_dec'
 ---
  End of listfile

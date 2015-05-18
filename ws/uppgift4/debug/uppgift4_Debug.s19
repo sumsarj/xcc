@@ -1,0 +1,204 @@
+S0030000FC
+S10D1000CF2FFF16100AA720FD00F1
+S123100AA720FE3DA7CC00023B1611791B823DA7CC00023B1611A31B823DA7CC00033B167B
+S123102A11791B823DA7CC00033B1611A31B823D1B9E87C76C80EC80AC842D0B18200030BA
+S123104AEE80086E8020EFF60400C4FD270DCC00023B1610BA1B8287C72018CC00013B16F6
+S123106A11791B8287C73B1611791B821820FFD0CC00011B823D1B9CCC00146C8287C76C88
+S123108A80EC80AC822D092019EE80086E8020F1F6040087C4FB8C00002705CC0001200D52
+S12310AA20E7CC00023B1610BA1B8287C71B843DEC828C0000271ECC00043B1611791B82E4
+S12310CACC00043B1611A31B82EE82096E82EC828C000026E23D1B9E1610241610806C8053
+S12310EA16102FEC801B823D1B9FC6016B80F60400C4012705CC00012011CC00013B1610C4
+S123110A3A1B826B80E78026E587C71B813D1BF1D01A86CD11CECC002A491802713104340B
+S123112AF91610F28C00001827003D87C76C8016100EEC80591A86ECE66C84EE80086E808F
+S123114AEC848C00FF2721EC843B16103A1B826C82EC828C000027101610E06C82EC828C89
+S123116A000027041820FFCA1610191BF0303D1B9ECC00016C80EE84EC808E00002707046E
+S123118A4404095920F46C80EC80FA11F87B11F8F611F87B04011B823D1B9ECC00016C80D9
+S12311AAEE84EC808E00002707044404095920F46C80EC80F411F87B11F8F611F87B04016D
+S10711CA1B823D3A09
+S12311CE0000000100010001000100010001000100020001000500020002000200020004E2
+S10D11EE000400030008000200FFE3
+S10511F80000F1
+S9031000EC
+SX:C:s:__start
+SX:C:M:drill$D:/Dokument/GitHub/xcc/src/drill.c
+SX:C:S:F:drill:Nstep:_Nstep:(typ11)(typ11)
+SX:C:S:L:drill:Nstep:a:4:(typ11)
+SX:C:S:F:drill:__func__:___func__:(typ11)
+SX:C:S:L:drill:Nstep:i:0:(typ11)
+SX:C:S:F:drill:DrillDownTest:_DrillDownTest:(typ11)(typ0)
+SX:C:S:F:drill:__func__:___func__:(typ11)
+SX:C:S:L:drill:DrillDownTest:retry:2:(typ11)
+SX:C:S:L:drill:DrillDownTest:i:0:(typ11)
+SX:C:S:F:drill:Alarm:_Alarm:(typ0)(typ11)
+SX:C:S:L:drill:Alarm:a:2:(typ11)
+SX:C:S:F:drill:__func__:___func__:(typ11)
+SX:C:S:F:drill:DrillHole:_DrillHole:(typ11)(typ0)
+SX:C:S:F:drill:__func__:___func__:(typ11)
+SX:C:S:L:drill:DrillHole:res:0:(typ12)
+SX:C:S:F:drill:RefPos:_RefPos:(typ11)(typ0)
+SX:C:S:F:drill:__func__:___func__:(typ11)
+SX:C:S:L:drill:RefPos:alarmtest:0:(typ4)
+SX:C:S:F:drill:DoAuto:_DoAuto:(typ0)(typ0)
+SX:C:S:F:drill:__func__:___func__:(typ11)
+SX:C:S:L:drill:DoAuto:pattern:6:(typ26-drill)
+SX:C:S:L:drill:DoAuto:antalSteg:4:(typ11)
+SX:C:S:L:drill:DoAuto:subrutinRes:2:(typ11)
+SX:C:S:L:drill:DoAuto:i:0:(typ11)
+SX:C:S:F:drill:OutOne:_OutOne:(typ0)(typ11)
+SX:C:S:L:drill:OutOne:bit:4:(typ11)
+SX:C:S:F:drill:__func__:___func__:(typ11)
+SX:C:S:L:drill:OutOne:a:0:(typ11)
+SX:C:S:F:drill:OutZero:_OutZero:(typ0)(typ11)
+SX:C:S:L:drill:OutZero:bit:4:(typ11)
+SX:C:S:F:drill:__func__:___func__:(typ11)
+SX:C:S:L:drill:OutZero:a:0:(typ11)
+SX:C:T:  typ0 V (-1)
+SX:C:T:  typ1 L (4)
+SX:C:T:  typ2 l (4)
+SX:C:T:  typ3 C (1)
+SX:C:T:  typ4 c (1)
+SX:C:T:  typ5 S (2)
+SX:C:T:  typ6 s (2)
+SX:C:T:  typ7 g (4)
+SX:C:T:  typ8 G (4)
+SX:C:T:  typ9 h (4)
+SX:C:T:  typ10 R (2)
+SX:C:T:  typ11 I (2)
+SX:C:T:  typ12 i (2)
+SX:C:T:  typ13 E (2)
+SX:C:T:  typ14 F (2)
+SX:C:T:  typ15 P (2)
+SX:C:T:drill: typ26-drill A (42)(typ11)
+SX:C:T: typ2 l (4)
+SX:C:T: typ4 c (1)
+SX:C:T: typ6 s (2)
+SX:A:M:_startup$D:/Dokument/GitHub/xcc/src/_startup.asm
+SX:C:T: typ2 l (4)
+SX:C:T: typ4 c (1)
+SX:C:T: typ6 s (2)
+SX:A:X:_startup:6:1000
+SX:A:X:_startup:7:1003
+SX:A:X:_startup:8:1006
+SX:A:X:_startup:9:1007
+SX:A:F:_startup:__start:1000:5
+SX:A:E:_startup:__start:1009:10
+SX:C:F:drill:_main:0000100A:5
+SX:C:X:drill:5:1:100A
+SX:C:X:drill:6:7:100B
+SX:C:X:drill:7:1:100D
+SX:C:Z:drill:7:1:100D
+SX:C:E:drill:_main:0000100E:7
+SX:C:F:drill:_MotorStart:0000100E:9
+SX:C:X:drill:9:1:100E
+SX:C:X:drill:10:9:100F
+SX:C:X:drill:11:1:1018
+SX:C:Z:drill:11:1:1018
+SX:C:E:drill:_MotorStart:00001019:11
+SX:C:F:drill:_MotorStop:00001019:12
+SX:C:X:drill:12:1:1019
+SX:C:X:drill:13:10:101A
+SX:C:X:drill:14:1:1023
+SX:C:Z:drill:14:1:1023
+SX:C:E:drill:_MotorStop:00001024:14
+SX:C:F:drill:_DrillDown:00001024:15
+SX:C:X:drill:15:1:1024
+SX:C:X:drill:16:9:1025
+SX:C:X:drill:17:1:102E
+SX:C:Z:drill:17:1:102E
+SX:C:E:drill:_DrillDown:0000102F:17
+SX:C:F:drill:_DrillUp:0000102F:18
+SX:C:X:drill:18:1:102F
+SX:C:X:drill:19:10:1030
+SX:C:X:drill:20:1:1039
+SX:C:Z:drill:20:1:1039
+SX:C:E:drill:_DrillUp:0000103A:20
+SX:C:F:drill:_Nstep:0000103A:21
+SX:C:X:drill:21:1:103A
+SX:C:X:drill:23:6:103C
+SX:C:X:drill:23:13:1040
+SX:C:X:drill:23:18:104A
+SX:C:X:drill:24:4:1051
+SX:C:X:drill:25:10:1058
+SX:C:X:drill:28:10:1065
+SX:C:X:drill:29:10:106E
+SX:C:X:drill:35:1:107D
+SX:C:Z:drill:35:1:107D
+SX:C:E:drill:_Nstep:00001080:35
+SX:C:F:drill:_DrillDownTest:00001080:36
+SX:C:X:drill:36:1:1080
+SX:C:X:drill:39:11:1082
+SX:C:X:drill:40:6:1087
+SX:C:X:drill:40:11:108B
+SX:C:X:drill:40:20:1093
+SX:C:X:drill:41:4:109A
+SX:C:X:drill:45:8:10AC
+SX:C:X:drill:47:1:10B7
+SX:C:Z:drill:47:1:10B7
+SX:C:E:drill:_DrillDownTest:000010BA:47
+SX:C:F:drill:_Alarm:000010BA:48
+SX:C:X:drill:48:1:10BA
+SX:C:X:drill:49:3:10BA
+SX:C:X:drill:53:10:10C1
+SX:C:X:drill:58:11:10CA
+SX:C:X:drill:59:3:10D3
+SX:C:X:drill:60:9:10D8
+SX:C:X:drill:63:1:10DF
+SX:C:Z:drill:63:1:10DF
+SX:C:E:drill:_Alarm:000010E0:63
+SX:C:F:drill:_DrillHole:000010E0:65
+SX:C:X:drill:65:1:10E0
+SX:C:X:drill:67:11:10E2
+SX:C:X:drill:68:22:10E5
+SX:C:X:drill:69:9:10EA
+SX:C:X:drill:71:1:10EF
+SX:C:Z:drill:71:1:10EF
+SX:C:E:drill:_DrillHole:000010F2:71
+SX:C:F:drill:_RefPos:000010F2:72
+SX:C:X:drill:72:1:10F2
+SX:C:X:drill:73:26:10F4
+SX:C:X:drill:75:3:10F8
+SX:C:X:drill:77:21:1104
+SX:C:X:drill:78:8:110F
+SX:C:X:drill:80:1:1115
+SX:C:Z:drill:80:1:1115
+SX:C:E:drill:_RefPos:00001118:80
+SX:C:F:drill:_DoAuto:00001118:81
+SX:C:X:drill:81:1:1118
+SX:C:X:drill:82:82:111B
+SX:C:X:drill:86:3:112B
+SX:C:X:drill:87:8:1135
+SX:C:X:drill:88:13:1139
+SX:C:X:drill:89:8:113C
+SX:C:X:drill:90:24:113C
+SX:C:X:drill:91:3:1145
+SX:C:X:drill:92:4:114A
+SX:C:X:drill:93:4:1151
+SX:C:X:drill:94:32:1151
+SX:C:X:drill:95:4:115B
+SX:C:X:drill:96:4:1162
+SX:C:X:drill:97:27:1162
+SX:C:X:drill:98:4:1167
+SX:C:X:drill:99:4:116E
+SX:C:X:drill:102:11:1172
+SX:C:X:drill:103:1:1175
+SX:C:Z:drill:103:1:1175
+SX:C:E:drill:_DoAuto:00001179:103
+SX:C:F:drill:_OutOne:00001179:104
+SX:C:X:drill:104:1:1179
+SX:C:X:drill:105:8:117B
+SX:C:X:drill:106:13:1180
+SX:C:X:drill:107:18:1192
+SX:C:X:drill:108:31:119A
+SX:C:X:drill:109:1:11A0
+SX:C:Z:drill:109:1:11A0
+SX:C:E:drill:_OutOne:000011A3:109
+SX:C:F:drill:_OutZero:000011A3:110
+SX:C:X:drill:110:1:11A3
+SX:C:X:drill:111:8:11A5
+SX:C:X:drill:112:13:11AA
+SX:C:X:drill:113:20:11BC
+SX:C:X:drill:114:31:11C4
+SX:C:X:drill:115:1:11CA
+SX:C:Z:drill:115:1:11CA
+SX:C:E:drill:_OutZero:000011CD:115
+SX:C:S:G:drill:ML4Shadow:_ML4Shadow:000011F8:(typ4)

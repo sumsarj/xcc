@@ -7,7 +7,7 @@ C:text	1B9CCC09C06C8287C76C80E6F30002C1
 C:text	802416E6F30002C18025F8E6F3000287
 C:text	8300806C80EC80200220E01B843D
 G:text:keyboardML15:00000000:_get_key
-SY:C:M:keyboardML15$F:/Dokument/GitHub/xcc/src/keyboardML15.c
+SY:C:M:keyboardML15$D:/Dokument/GitHub/xcc/src/keyboardML15.c
 SY:C:F:keyboardML15:text:_get_key:00000000:7
 SY:C:X:keyboardML15:7:1:text:0
 SY:C:S:F:keyboardML15:get_key:_get_key:(typ12)

@@ -1,0 +1,81 @@
+QLD (Version 4.8.1)- Link/Load Summary: 'debug\uppgift4_Debug.s19'
+SCRIPT FILES FROM THE FOLLOWING PATH(S):
+  'D:/Program/EducDist/config/xcc12'
+
+SCRIPT READ FROM THE FOLLOWING FILE(S):
+  'default.lsc'
+
+---------------------------
+ SEARCHED LIBRARIES:
+ 'D:/Program/EducDist/lib/xcc12/libcd.e12'
+ 'D:/Program/EducDist/lib/xcc12/libed.e12'
+ 'D:/Program/EducDist/lib/xcc12/librtkd.e12'
+ 'D:/Program/EducDist/lib/xcc12/libccd.e12'
+
+---------------------------
+ PROGRAM ENTRY:'__start'
+---------------------------
+ GROUPS AND SEGMENTS:
+
+  GROUP 'test_group', READ/WRITE ,allocation to: 00001000 - 000011F9, (size: 506 Bytes)
+   00001000 00001009 'init'
+   0000100A 000011CD 'text'
+   000011CE 000011F7 'rodata'
+   000011F8 000011F9 'bss'
+
+  GROUP 'interrupt_vectors', READ/WRITE
+   NO SEGMENTS
+
+  GROUP 'const_group',
+   NO SEGMENTS
+---------------------------
+LINKER DEFINED CONSTANTS:
+   __rom_code_enabled = 0
+   __heap_start = 000011FA
+  from segment 'text'
+   0000100A '__text__start'
+   000011CE '__text__end'
+   000001C4 '__text__size'
+  from segment 'bss'
+   000011F8 '__bss__start'
+   000011FA '__bss__end'
+   00000002 '__bss__size'
+  from segment 'data'
+   00000000 '__data__start'
+   00000000 '__data__end'
+   00000000 '__data__size'
+  from segment 'rodata'
+   000011CE '__rodata__start'
+   000011F8 '__rodata__end'
+   0000002A '__rodata__size'
+  from segment 'init'
+   00001000 '__init__start'
+   0000100A '__init__end'
+   0000000A '__init__size'
+---------------------------
+GLOBAL SYMBOL(S):
+
+ in module: 'drill' of type 'O12' defined in file 'drill.o12'
+  in segment: 'text'
+   0000100A '_main'
+   00001019 '_MotorStop'
+   0000102F '_DrillUp'
+   000011A3 '_OutZero'
+   000010BA '_Alarm'
+   0000103A '_Nstep'
+   0000100E '_MotorStart'
+   00001080 '_DrillDownTest'
+   00001118 '_DoAuto'
+   000010F2 '_RefPos'
+   00001179 '_OutOne'
+   000010E0 '_DrillHole'
+   00001024 '_DrillDown'
+  in segment: 'bss'
+   000011F8 '_ML4Shadow'
+
+ in module: '_startup' of type 'O12' defined in file '_startup.o12'
+  in segment: 'init'
+   00001006 '_exit'
+   00001000 '__start'
+---
+ End of listfile

@@ -1,5 +1,5 @@
 mod:displayML15:O12:displayML15.o12
-seg:text:153
+seg:text:144
 seg:bss:0
 seg:data:0
 seg:rodata:0
@@ -7,13 +7,13 @@ C:text	1B9D6982C6017B09C2C6D07B09C37909
 C:text	C287C76C80EC808C00062D092014EE80
 C:text	086E8020F0EC85E380B745E6007B09C3
 C:text	20ECE6827B09C3E6827B09C31B833D
-C:text	1B94EC8E6B8B87C76C83EC838C00062D
-C:text	0B1820003AEE83086E8320EEE68B87CE
-C:text	000A18151A856B82CC0005A3831AE6E6
-C:text	826B00E68B87CE000A18156C80E68B87
-C:text	A380CE000A1815B7546B8B1820FFC61A
-C:text	85341600001B821B8C3D
-RG:text:displayML15:00000092:O:W:_display_digits:195
+C:text	1B9587C76C83EC838C00062D0B182000
+C:text	35EE83086E8320EEEC8DCE000A18101A
+C:text	856B82CC0005A3831AE6E6826B00EC8D
+C:text	CE000A18106C80EC8DA380CE000A1810
+C:text	6E8D1820FFCB1A85341600001B821B8B
+C:text	3D
+RG:text:displayML15:00000089:O:W:_display_digits:186
 G:text:displayML15:00000000:_display_digits
 G:text:displayML15:0000003F:_display_dec
 SY:C:M:displayML15$D:/Dokument/GitHub/xcc/src/displayML15.c
@@ -40,21 +40,19 @@ SY:C:E:displayML15:text:_display_digits:0000003F:30
 SY:C:F:displayML15:text:_display_dec:0000003F:33
 SY:C:X:displayML15:33:1:text:3F
 SY:C:S:F:displayML15:display_dec:_display_dec:(typ0)(typ12)
-SY:C:S:L:displayML15:display_dec:segment:14:(typ12)
+SY:C:S:L:displayML15:display_dec:segment:13:(typ12)
 SY:C:S:F:displayML15:__func__:___func__:(typ11)
-SY:C:S:L:displayML15:display_dec:segment_8:11:(typ4)
 SY:C:S:L:displayML15:display_dec:digitsArray:5:(typ18-displayML15)
 SY:C:S:L:displayML15:display_dec:i:3:(typ11)
-SY:C:X:displayML15:34:26:text:41
-SY:C:X:displayML15:37:6:text:45
-SY:C:X:displayML15:37:12:text:49
-SY:C:X:displayML15:37:16:text:54
-SY:C:X:displayML15:38:33:text:5B
-SY:C:X:displayML15:39:41:text:72
-SY:C:X:displayML15:41:31:text:8E
-SY:C:X:displayML15:42:1:text:96
-SY:C:Z:displayML15:42:1:text:96
-SY:C:E:displayML15:text:_display_dec:00000099:42
+SY:C:X:displayML15:37:6:text:41
+SY:C:X:displayML15:37:12:text:45
+SY:C:X:displayML15:37:16:text:50
+SY:C:X:displayML15:38:31:text:57
+SY:C:X:displayML15:39:35:text:6D
+SY:C:X:displayML15:41:31:text:85
+SY:C:X:displayML15:42:1:text:8D
+SY:C:Z:displayML15:42:1:text:8D
+SY:C:E:displayML15:text:_display_dec:00000090:42
 SY:C:T:  typ0 V (-1)
 SY:C:T:  typ1 L (4)
 SY:C:T:  typ2 l (4)
