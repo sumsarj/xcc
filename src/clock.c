@@ -30,11 +30,7 @@ time_type get_time(){     //returnera tid i ms
 	return time;
 }
 void hold(time_type ms){ //vänta ms/10-antal avbrott á 10 ms.
-	/*unsigned int asd = 0xDF;
-	while(asd){
-		asd--;
-		
-	}*/
+
 	time_type tmp;
 	unsigned short msShort;
 	
