@@ -1,10 +1,10 @@
 #include "ports.h"
 #include "drill.h"
-unsigned char ML4Shadow;
+unsigned char ML4Shadow = 0;
 
 void MotorStart(){
 	OutOne(2);
-	hold();
+	hold((time_type)250);
 }
 void MotorStop(){
 	OutZero(2);
@@ -15,18 +15,17 @@ void DrillDown(){
 void DrillUp(){
 	OutZero(3);
 }
-int Nstep(int a){
+int Nstep(int a){   //a == antal steg att steppa
 	int i;
-	for(i = 0; i<a; i++){
-		if(0 == (BORR_STATUS & 0x2)){
+	for(i = 0; i<a; i++){	//steppa a gånger
+		if(0 == (BORR_STATUS & 0x2)){	//borren uppe?
 			Alarm(2);
 			return 0;
 		}
 		OutOne(1);
-		hold();
+		hold((time_type)250);    //250 ms delay
 		OutOne(0);
-		hold();
-		hold();
+		hold((time_type)500);
 		OutZero(0);
 		
 	}
@@ -36,27 +35,21 @@ int DrillDownTest(){
 	int retry;
 	int i;
 	retry = 20;
-	for(i=0; i<retry; i++){
+	for(i=0; i<retry; i++){ //testa om borren är nere (retry) gånger
 		if((BORR_STATUS & 0x4))
 			return 1;
-		hold();
+		hold((time_type)250);   //delat 250 ms
 	}
 	Alarm(2);
 	return 0;
 }
 void Alarm(int a){
-	if(a != 0){
-		do{
-		hold();
-		hold();
+	int i;
+	for(i=0; i<a ;i++){
+		hold((time_type)500);
 		OutOne(4);
-		hold();
-		hold();
-		hold();
-		hold();
+		hold((time_type)1000); //delat 1 sekund
 		OutZero(4);
-		a--;
-		}while(a != 0);
 	}
 	
 }
@@ -65,9 +58,9 @@ int DrillHole(){
 	unsigned int res;
 	DrillDown();
 	res = DrillDownTest();
-	hold();
+	hold((time_type)250);
 	DrillUp();
-	hold();
+	hold((time_type)250);
 	return res;
 }
 int RefPos(){

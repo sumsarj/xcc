@@ -1,16 +1,16 @@
 QLD (Version 4.8.1)- Link/Load Summary: 'debug\hello_Debug.s19'
 SCRIPT FILES FROM THE FOLLOWING PATH(S):
-  'F:/Program/GMV/EducDist/config/xcc12'
+  'D:/Program/EducDist/config/xcc12'
 
 SCRIPT READ FROM THE FOLLOWING FILE(S):
   'default.lsc'
 
 ---------------------------
  SEARCHED LIBRARIES:
- 'F:/Program/GMV/EducDist/lib/xcc12/libcd.e12'
- 'F:/Program/GMV/EducDist/lib/xcc12/libed.e12'
- 'F:/Program/GMV/EducDist/lib/xcc12/librtkd.e12'
- 'F:/Program/GMV/EducDist/lib/xcc12/libccd.e12'
+ 'D:/Program/EducDist/lib/xcc12/libcd.e12'
+ 'D:/Program/EducDist/lib/xcc12/libed.e12'
+ 'D:/Program/EducDist/lib/xcc12/librtkd.e12'
+ 'D:/Program/EducDist/lib/xcc12/libccd.e12'
 
 ---------------------------
  PROGRAM ENTRY:'__start'
@@ -37,10 +37,6 @@ LINKER DEFINED CONSTANTS:
    00001016 '__text__start'
    000031AA '__text__end'
    00002194 '__text__size'
-  from segment 'init'
-   00001000 '__init__start'
-   00001016 '__init__end'
-   00000016 '__init__size'
   from segment 'bss'
    00003214 '__bss__start'
    0000324C '__bss__end'
@@ -53,22 +49,26 @@ LINKER DEFINED CONSTANTS:
    000031AA '__rodata__start'
    00003214 '__rodata__end'
    0000006A '__rodata__size'
+  from segment 'init'
+   00001000 '__init__start'
+   00001016 '__init__end'
+   00000016 '__init__size'
 ---------------------------
 GLOBAL SYMBOL(S):
 
- in module: '_startup' of type 'O12' defined in file '_startup.o12'
-  in segment: 'text'
-   0000102B '__inchar'
-   00001019 '__init'
-   00001025 '__outchar'
-   00001028 '__tstchar'
-   00001016 '__lowexit'
-  in segment: 'init'
-   00001000 '__start'
-
  in module: 'hello' of type 'O12' defined in file 'hello.o12'
   in segment: 'text'
-   00001032 '_main'
+   00001016 '_main'
+
+ in module: '_startup' of type 'O12' defined in file '_startup.o12'
+  in segment: 'text'
+   00001036 '__inchar'
+   00001024 '__init'
+   00001030 '__outchar'
+   00001033 '__tstchar'
+   00001021 '__lowexit'
+  in segment: 'init'
+   00001000 '__start'
 
  in module: 'printf' of type 'O12' defined in file 'printf.o12'
   in segment: 'text'

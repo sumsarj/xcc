@@ -17,11 +17,12 @@ SCRIPT READ FROM THE FOLLOWING FILE(S):
 ---------------------------
  GROUPS AND SEGMENTS:
 
-  GROUP 'test_group', READ/WRITE ,allocation to: 00001000 - 0000133F, (size: 832 Bytes)
+  GROUP 'test_group', READ/WRITE ,allocation to: 00001000 - 00001551, (size: 1362 Bytes)
    00001000 00001009 'init'
-   0000100A 0000130F 'text'
-   00001310 00001339 'rodata'
-   0000133A 0000133F 'bss'
+   0000100A 00001521 'text'
+   00001522 0000154B 'rodata'
+   0000154C 0000154D 'data'
+   0000154E 00001551 'bss'
 
   GROUP 'interrupt_vectors', READ/WRITE
    NO SEGMENTS
@@ -31,22 +32,22 @@ SCRIPT READ FROM THE FOLLOWING FILE(S):
 ---------------------------
 LINKER DEFINED CONSTANTS:
    __rom_code_enabled = 0
-   __heap_start = 00001340
+   __heap_start = 00001552
   from segment 'text'
    0000100A '__text__start'
-   00001310 '__text__end'
-   00000306 '__text__size'
+   00001522 '__text__end'
+   00000518 '__text__size'
   from segment 'bss'
-   0000133A '__bss__start'
-   00001340 '__bss__end'
-   00000006 '__bss__size'
+   0000154E '__bss__start'
+   00001552 '__bss__end'
+   00000004 '__bss__size'
   from segment 'data'
-   00000000 '__data__start'
-   00000000 '__data__end'
-   00000000 '__data__size'
+   0000154C '__data__start'
+   0000154E '__data__end'
+   00000002 '__data__size'
   from segment 'rodata'
-   00001310 '__rodata__start'
-   0000133A '__rodata__end'
+   00001522 '__rodata__start'
+   0000154C '__rodata__end'
    0000002A '__rodata__size'
   from segment 'init'
    00001000 '__init__start'
@@ -57,20 +58,20 @@ GLOBAL SYMBOL(S):
 
  in module: 'drill' of type 'O12' defined in file 'drill.o12'
   in segment: 'text'
-   00001018 '_MotorStop'
-   0000102E '_DrillUp'
-   000011D1 '_OutZero'
-   000010CC '_Alarm'
-   00001039 '_Nstep'
+   00001022 '_MotorStop'
+   00001038 '_DrillUp'
+   00001218 '_OutZero'
+   000010F1 '_Alarm'
+   00001043 '_Nstep'
    0000100A '_MotorStart'
-   00001093 '_DrillDownTest'
-   00001146 '_DoAuto'
-   00001120 '_RefPos'
-   000011A7 '_OutOne'
-   00001108 '_DrillHole'
-   00001023 '_DrillDown'
-  in segment: 'bss'
-   0000133A '_ML4Shadow'
+   000010AE '_DrillDownTest'
+   0000118D '_DoAuto'
+   00001167 '_RefPos'
+   000011EE '_OutOne'
+   0000113B '_DrillHole'
+   0000102D '_DrillDown'
+  in segment: 'data'
+   0000154C '_ML4Shadow'
 
  in module: '_startup' of type 'O12' defined in file '_startup.o12'
   in segment: 'init'
@@ -79,26 +80,43 @@ GLOBAL SYMBOL(S):
 
  in module: 'avbrott' of type 'O12' defined in file 'avbrott.o12'
   in segment: 'text'
-   00001201 '_myCLI'
-   000011FD '_clock_inter_asm'
+   00001248 '_myCLI'
+   00001244 '_clock_inter_asm'
 
  in module: 'clock' of type 'O12' defined in file 'clock.o12'
   in segment: 'text'
-   00001242 '_hold'
-   00001204 '_init_clock'
-   0000123A '_get_time'
-   00001221 '_clock_inter'
+   000012A3 '_hold'
+   0000124B '_init_clock'
+   00001281 '_get_time'
+   00001268 '_clock_inter'
 
  in module: 'keyboardML15' of type 'O12' defined in file 'keyboardML15.o12'
   in segment: 'text'
-   0000126C '_get_key'
+   000012EB '_get_key'
 
  in module: 'main' of type 'O12' defined in file 'main.o12'
   in segment: 'text'
-   0000129A '_main'
+   00001319 '_main'
+
+ in module: '_add32' of type 'O12' defined in file '_add32.o12'
+  in segment: 'text'
+   00001375 'add32'
+
+ in module: '_mul32' of type 'O12' defined in file '_mul32.o12'
+  in segment: 'text'
+   00001417 'muls32'
+   00001384 'mulu32'
+
+ in module: '_and32' of type 'O12' defined in file '_and32.o12'
+  in segment: 'text'
+   000014E0 'and32'
 
  in module: '_cmp32' of type 'O12' defined in file '_cmp32.o12'
   in segment: 'text'
-   000012F6 'cmp32'
+   000014EF 'cmp32'
+
+ in module: '_shl32' of type 'O12' defined in file '_shl32.o12'
+  in segment: 'text'
+   00001508 'shl32'
 ---
  End of listfile

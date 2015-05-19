@@ -16,7 +16,7 @@ G:text:_startup:0000000F:__outchar
 G:text:_startup:00000012:__tstchar
 G:text:_startup:00000000:__lowexit
 G:init:_startup:00000000:__start
-SY:A:M:_startup$F:/Program/GMV/EducDist/src/startup/xcc12/_startup.s12
+SY:A:M:_startup$D:/Program/EducDist/src/startup/xcc12/_startup.s12
 SY:A:X:_startup:29:init:0
 SY:A:X:_startup:30:init:3
 SY:A:X:_startup:32:init:6

@@ -25,9 +25,9 @@ typedef unsigned short * port16ptr;
 //----------------------------------------------------
 
 //CRG-----------------------------------------------
-#define RTICTL *((unsigned char*)(0x34 + 0x7))
-#define CRGINT *((unsigned char*)(0x34 + 0x4))
-#define CRGFLG *((unsigned char*)(0x34 + 0x3))
+#define RTICTL *((port8ptr)(0x34 + 0x7))
+#define CRGINT *((port8ptr)(0x34 + 0x4))
+#define CRGFLG *((port8ptr)(0x34 + 0x3))
 #define IRQ_VEC_ADR 0x3FF0
 #define IRQ_VEC *((port16ptr) IRQ_VEC_ADR)
 

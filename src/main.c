@@ -4,7 +4,7 @@
 int main(){
 	init_clock();
 	while(1){
-	unsigned int qwe = get_key();
+	unsigned int qwe = (unsigned int)get_key();
 	switch(qwe){
 	case 0 : 
 		MotorStart();

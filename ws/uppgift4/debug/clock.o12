@@ -1,33 +1,43 @@
 mod:clock:O12:clock.o12
-seg:text:104
+seg:text:160
 seg:bss:4
 seg:data:0
 seg:rodata:0
-C:text	A7C6207B003BC6807B003887C77C0002
+C:text	A7C6107B003BC6807B003887C77C0002
 C:text	7C0000CC00007C3FF01600003D
 C:text	A7FD0000FC0002C300012401027D0000
 C:text	7C0002C6807B00373D
-C:text	A7FD0000FC00023D
-C:text	1B9CFD0000FC00026D806C82FD0000FC
-C:text	00023B35ED84EC86C300022401023B35
-C:text	1600001B8826E51B843D
+C:text	1B9CCD0000CC000A3B35FD0000FC0002
+C:text	3B351600001B886D806C82ED80EC821B
+C:text	843D
+C:text	1B98FD0000FC00026D846C8687C77C00
+C:text	027C0000EC8C6C82EC82CE000A18106E
+C:text	82FC00026C80EC82AC8026F5ED84EC86
+C:text	3B35FD0000FC00023B351600001B887D
+C:text	00007C00021B883D
 C:bss	00000000
 RG:text:clock:00000014:O:W:_clock_inter_asm:56
 RG:text:clock:0000001A:O:W:_myCLI:61
-RG:text:clock:0000005F:O:W:cmp32:161
+RG:text:clock:00000049:O:W:mulu32:127
+RG:text:clock:00000093:O:W:add32:214
 RL:text:clock:0000000E:O:W:00000000:bss:51
 RL:text:clock:00000011:O:W:00000000:bss:52
 RL:text:clock:0000001F:O:W:00000000:bss:82
 RL:text:clock:00000022:O:W:00000000:bss:83
 RL:text:clock:0000002B:O:W:00000000:bss:87
 RL:text:clock:0000002E:O:W:00000000:bss:88
-RL:text:clock:00000038:O:W:00000000:bss:112
-RL:text:clock:0000003B:O:W:00000000:bss:113
-RL:text:clock:00000041:O:W:00000000:bss:143
-RL:text:clock:00000044:O:W:00000000:bss:144
-RL:text:clock:0000004B:O:W:00000000:bss:150
-RL:text:clock:0000004E:O:W:00000000:bss:151
-G:text:clock:0000003E:_hold
+RL:text:clock:00000041:O:W:00000000:bss:123
+RL:text:clock:00000044:O:W:00000000:bss:124
+RL:text:clock:0000005B:O:W:00000000:bss:174
+RL:text:clock:0000005E:O:W:00000000:bss:175
+RL:text:clock:00000067:O:W:00000000:bss:182
+RL:text:clock:0000006A:O:W:00000000:bss:183
+RL:text:clock:0000007A:O:W:00000000:bss:199
+RL:text:clock:0000008B:O:W:00000000:bss:210
+RL:text:clock:0000008E:O:W:00000000:bss:211
+RL:text:clock:00000098:O:W:00000000:bss:216
+RL:text:clock:0000009B:O:W:00000000:bss:217
+G:text:clock:00000058:_hold
 G:text:clock:00000000:_init_clock
 G:text:clock:00000036:_get_time
 G:text:clock:0000001D:_clock_inter
@@ -35,8 +45,8 @@ SY:C:M:clock$D:/Dokument/GitHub/xcc/src/clock.c
 SY:C:S:S:clock:bss:counter:00000000:(typ2)
 SY:C:F:clock:text:_init_clock:00000000:9
 SY:C:X:clock:9:1:text:0
-SY:C:X:clock:11:39:text:1
-SY:C:X:clock:13:39:text:6
+SY:C:X:clock:11:33:text:1
+SY:C:X:clock:13:33:text:6
 SY:C:X:clock:15:12:text:B
 SY:C:X:clock:17:55:text:13
 SY:C:X:clock:19:7:text:19
@@ -46,25 +56,35 @@ SY:C:E:clock:text:_init_clock:0000001D:20
 SY:C:F:clock:text:_clock_inter:0000001D:22
 SY:C:X:clock:22:1:text:1D
 SY:C:X:clock:23:8:text:1E
-SY:C:X:clock:25:39:text:30
+SY:C:X:clock:25:33:text:30
 SY:C:X:clock:26:1:text:35
 SY:C:Z:clock:26:1:text:35
 SY:C:E:clock:text:_clock_inter:00000036:26
 SY:C:F:clock:text:_get_time:00000036:27
 SY:C:X:clock:27:1:text:36
-SY:C:X:clock:29:1:text:3D
-SY:C:Z:clock:29:1:text:3D
-SY:C:E:clock:text:_get_time:0000003E:29
-SY:C:F:clock:text:_hold:0000003E:30
-SY:C:X:clock:30:1:text:3E
-SY:C:S:F:clock:hold:_hold:(typ0)(typ0)
+SY:C:S:F:clock:get_time:_get_time:(typ2)
 SY:C:S:F:clock:__func__:___func__:(typ11)
-SY:C:S:L:clock:hold:counterCompare:0:(typ2)
-SY:C:X:clock:36:25:text:40
-SY:C:X:clock:37:7:text:4A
-SY:C:X:clock:40:1:text:65
-SY:C:Z:clock:40:1:text:65
-SY:C:E:clock:text:_hold:00000068:40
+SY:C:S:L:clock:get_time:time:0:(typ2)
+SY:C:X:clock:29:20:text:38
+SY:C:X:clock:31:1:text:55
+SY:C:Z:clock:31:1:text:55
+SY:C:E:clock:text:_get_time:00000058:31
+SY:C:F:clock:text:_hold:00000058:32
+SY:C:X:clock:32:1:text:58
+SY:C:S:F:clock:hold:_hold:(typ0)(typ2)
+SY:C:S:L:clock:hold:ms:10:(typ2)
+SY:C:S:F:clock:__func__:___func__:(typ11)
+SY:C:S:L:clock:hold:tmp:4:(typ2)
+SY:C:S:L:clock:hold:msShort:2:(typ6)
+SY:C:X:clock:41:14:text:5A
+SY:C:X:clock:42:12:text:64
+SY:C:X:clock:44:29:text:6C
+SY:C:X:clock:45:21:text:70
+SY:C:X:clock:47:7:text:79
+SY:C:X:clock:48:15:text:84
+SY:C:X:clock:49:1:text:9D
+SY:C:Z:clock:49:1:text:9D
+SY:C:E:clock:text:_hold:000000A0:49
 SY:C:T:  typ0 V (-1)
 SY:C:T:  typ1 L (4)
 SY:C:T:  typ2 l (4)

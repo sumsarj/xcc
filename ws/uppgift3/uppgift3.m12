@@ -43,11 +43,6 @@
 ##OTYPE=1
 #-----------------------------------------------
 #OPEN FILE SECTION
-##OF "..\..\src\uppgift3.c"
-##OF "..\..\src\clock.c"
-##OF "..\..\src\avbrott.asm"
-##OF "..\..\src\ports.h"
-##OF "..\..\src\clock.h"
 #-----------------------------------------------
 #PROJECT FILES SECTION
 

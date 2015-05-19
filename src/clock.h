@@ -1,14 +1,14 @@
-void init_clock(void);
+void init_clock();
 
-void clock_inter(void);
+void clock_inter();
 
-time_type get_time(void);
+time_type get_time();
 
-void hold (void);
+void hold (time_type);
 
-void clock_inter_asm(void);
+void clock_inter_asm();
 
-void myCLI(void);
+void myCLI();
 
 
 

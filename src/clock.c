@@ -4,11 +4,11 @@
 #define port
 #endif
 #include "clock.h"
-static time_type counter;
+static time_type counter; //avbrottsräknare
 
 void init_clock(){
 	// sätt avbrottsintervall
-	RTICTL = 0x20;
+	RTICTL = 0x10;
 	// aktiver crg
 	CRGINT = 0x80; // set MSb
 	//nollställ counter
@@ -20,21 +20,30 @@ void init_clock(){
 }
 
 void clock_inter(){ //avbrottsrutin i C
-	counter++;
+	counter++;  //öka avrottsräknaren
 	//kvittera avbrott
 	CRGFLG = 0x80;
 }
-time_type get_time(){
-	return counter;
+time_type get_time(){     //returnera tid i ms
+	time_type time;	
+	time = counter * 10;  //counter är i 10-tal ms
+	return time;
 }
-void hold(){
+void hold(time_type ms){ //vänta ms/10-antal avbrott á 10 ms.
 	/*unsigned int asd = 0xDF;
 	while(asd){
 		asd--;
+		
 	}*/
-	unsigned long int counterCompare;
-	counterCompare = counter;
-	while((counterCompare + 2) != counter){
-	}
+	time_type tmp;
+	unsigned short msShort;
 	
+	tmp = counter;
+	counter = 0;
+	
+	msShort	= (unsigned short)ms;
+	msShort = msShort/10;
+	
+	while(msShort != (short)counter);
+	counter += tmp;
 }
