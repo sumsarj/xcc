@@ -1,5 +1,5 @@
 typedef unsigned char * port8ptr;
-
+typedef unsigned short * port16ptr;
 #define set(x, mask) (x) |= (mask)
 #define clear(x, mask) (x) &= ~(mask)
 
@@ -28,10 +28,8 @@ typedef unsigned char * port8ptr;
 #define RTICTL *((unsigned char*)(0x34 + 0x7))
 #define CRGINT *((unsigned char*)(0x34 + 0x4))
 #define CRGFLG *((unsigned char*)(0x34 + 0x3))
-typedef void (*vec) (void); // avbrottsvektor 
-typedef vec *vecptr; // pekare till avbrottsvektor 
 #define IRQ_VEC_ADR 0x3FF0
-#define IRQ_VEC *((vecptr) IRQ_VEC_ADR)
+#define IRQ_VEC *((port16ptr) IRQ_VEC_ADR)
 
 typedef volatile unsigned long int time_type;
 //---------------------------------------------------
@@ -41,5 +39,5 @@ typedef volatile unsigned long int time_type;
 
 #define BORR_CTRL_ADR 0x400
 #define BORR_CTRL *((port8ptr)BORR_CTRL_ADR)
-//_----------------------------------------
+//------------------------------------------------
 

@@ -4,34 +4,37 @@
 #define port
 #endif
 #include "clock.h"
-time_type counter;
+static time_type counter;
 
 void init_clock(){
 	// sätt avbrottsintervall
-	RTICTL = 0x2;
-	
+	RTICTL = 0x20;
 	// aktiver crg
-	CRGINT |= 0x80; // set MSb
-	
+	CRGINT = 0x80; // set MSb
+	//nollställ counter
 	counter = 0;
-	
-	IRQ_VEC = *((vecptr)*clock_inter_asm);
-	
+	//init avbrottsvektor, clock_inter_asm är assembler turin
+	IRQ_VEC = (unsigned short)clock_inter_asm;
+	//tillåt avbrott
 	myCLI();
-
 }
 
-void clock_inter(){
+void clock_inter(){ //avbrottsrutin i C
 	counter++;
-	CRGFLG |= 0x80;
+	//kvittera avbrott
+	CRGFLG = 0x80;
 }
 time_type get_time(){
-	//counter++;
 	return counter;
 }
 void hold(){
-	unsigned int asd = 0xDF;
+	/*unsigned int asd = 0xDF;
 	while(asd){
 		asd--;
+	}*/
+	unsigned long int counterCompare;
+	counterCompare = counter;
+	while((counterCompare + 2) != counter){
 	}
+	
 }

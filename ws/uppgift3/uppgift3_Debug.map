@@ -17,10 +17,10 @@ SCRIPT READ FROM THE FOLLOWING FILE(S):
 ---------------------------
  GROUPS AND SEGMENTS:
 
-  GROUP 'test_group', READ/WRITE ,allocation to: 00001000 - 000010F9, (size: 250 Bytes)
+  GROUP 'test_group', READ/WRITE ,allocation to: 00001000 - 00001135, (size: 310 Bytes)
    00001000 00001009 'init'
-   0000100A 000010F5 'text'
-   000010F6 000010F9 'bss'
+   0000100A 00001131 'text'
+   00001132 00001135 'bss'
 
   GROUP 'interrupt_vectors', READ/WRITE
    NO SEGMENTS
@@ -30,18 +30,18 @@ SCRIPT READ FROM THE FOLLOWING FILE(S):
 ---------------------------
 LINKER DEFINED CONSTANTS:
    __rom_code_enabled = 0
-   __heap_start = 000010FA
+   __heap_start = 00001136
   from segment 'text'
    0000100A '__text__start'
-   000010F6 '__text__end'
-   000000EC '__text__size'
+   00001132 '__text__end'
+   00000128 '__text__size'
   from segment 'init'
    00001000 '__init__start'
    0000100A '__init__end'
    0000000A '__init__size'
   from segment 'bss'
-   000010F6 '__bss__start'
-   000010FA '__bss__end'
+   00001132 '__bss__start'
+   00001136 '__bss__end'
    00000004 '__bss__size'
   from segment 'data'
    00000000 '__data__start'
@@ -61,24 +61,27 @@ GLOBAL SYMBOL(S):
 
  in module: 'clock' of type 'O12' defined in file 'clock.o12'
   in segment: 'text'
+   00001048 '_hold'
    0000100A '_init_clock'
-   00001046 '_get_time'
-   0000102A '_clock_inter'
-  in segment: 'bss'
-   000010F6 '_counter'
+   00001040 '_get_time'
+   00001027 '_clock_inter'
 
  in module: 'avbrott' of type 'O12' defined in file 'avbrott.o12'
   in segment: 'text'
-   00001052 '_myCLI'
-   0000104E '_clock_inter_asm'
+   00001076 '_myCLI'
+   00001072 '_clock_inter_asm'
 
  in module: 'uppgift3' of type 'O12' defined in file 'uppgift3.o12'
   in segment: 'text'
-   00001055 '_main'
+   00001079 '_main'
 
  in module: 'displayML15' of type 'O12' defined in file 'displayML15.o12'
   in segment: 'text'
-   00001065 '_display_digits'
-   000010A4 '_display_dec'
+   00001089 '_display_digits'
+   000010C8 '_display_dec'
+
+ in module: '_cmp32' of type 'O12' defined in file '_cmp32.o12'
+  in segment: 'text'
+   00001119 'cmp32'
 ---
  End of listfile

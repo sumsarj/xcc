@@ -43,11 +43,6 @@
 ##OTYPE=1
 #-----------------------------------------------
 #OPEN FILE SECTION
-##OF "..\..\src\clock.c"
-##OF "..\..\src\drill.c"
-##OF "..\..\src\main.c"
-##OF "..\..\src\keyboardML15.c"
-##OF "..\..\src\ports.h"
 #-----------------------------------------------
 #PROJECT FILES SECTION
 

@@ -1,7 +1,8 @@
 #include "ports.h"
 #include "drill.h"
 
-void main(){
+int main(){
+	init_clock();
 	while(1){
 	unsigned int qwe = get_key();
 	switch(qwe){
@@ -33,4 +34,5 @@ void main(){
 	
 	}
 	}
+	return 0;
 }
