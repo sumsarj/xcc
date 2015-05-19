@@ -1,4 +1,5 @@
 #include "ports.h"
+#include "drill.h"
 
 void main(){
 	while(1){
@@ -6,19 +7,28 @@ void main(){
 	switch(qwe){
 	case 0 : 
 		MotorStart();
-	case 1 : 
+		break;
+	case 1 :
+		MotorStop();
+		break;
+	case 2 : 
 		DrillDown();
-	case 2 :
-		DrillUp();
+		break;
 	case 3 :
-		Nstep(0);
-	case 4:
-		DrillHole();
+		DrillUp();
+		break;
+	case 4 :
+		Nstep(1);
+		break;
 	case 5:
-		RefPos();
+		DrillHole();
+		break;
 	case 6:
+		RefPos();
+		break;
+	case 7:
 		DoAuto();
-	
+		break;
 	
 	
 	}

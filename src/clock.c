@@ -8,7 +8,7 @@ time_type counter;
 
 void init_clock(){
 	// sätt avbrottsintervall
-	RTICTL = 0x1;
+	RTICTL = 0x2;
 	
 	// aktiver crg
 	CRGINT |= 0x80; // set MSb
@@ -30,7 +30,7 @@ time_type get_time(){
 	return counter;
 }
 void hold(){
-	unsigned long int asd = 0xFFFFFFFF;
+	unsigned int asd = 0xDF;
 	while(asd){
 		asd--;
 	}

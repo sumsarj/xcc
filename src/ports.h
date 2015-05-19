@@ -36,10 +36,10 @@ typedef vec *vecptr; // pekare till avbrottsvektor
 typedef volatile unsigned long int time_type;
 //---------------------------------------------------
 //DRILL-------------------------------------------
-#define BORR_STATUS_ADR 0x400
+#define BORR_STATUS_ADR 0x401
 #define BORR_STATUS *((port8ptr)BORR_STATUS_ADR)
 
-#define BORR_CTRL_ADR 0x401
+#define BORR_CTRL_ADR 0x400
 #define BORR_CTRL *((port8ptr)BORR_CTRL_ADR)
 //_----------------------------------------
 

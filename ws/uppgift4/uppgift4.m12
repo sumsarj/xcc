@@ -4,6 +4,7 @@
 #
 #-----------------------------------------------
 #SETTINGS SECTION
+##CSIMSET=".\drilkbd.hc12sim"
 ##EXTMAKEFILE=""
 ##EXTMAKEFILEPARAM=""
 #+[BackCol(0)]=
@@ -42,6 +43,11 @@
 ##OTYPE=1
 #-----------------------------------------------
 #OPEN FILE SECTION
+##OF "..\..\src\clock.c"
+##OF "..\..\src\drill.c"
+##OF "..\..\src\main.c"
+##OF "..\..\src\keyboardML15.c"
+##OF "..\..\src\ports.h"
 #-----------------------------------------------
 #PROJECT FILES SECTION
 
@@ -168,7 +174,8 @@ clean:
 	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  $(INC) -o"debug\keyboardML15.o12" "D:/Dokument/GitHub/xcc/src/keyboardML15.c"
 "debug\main.o12":	\
 	"D:/Dokument/GitHub/xcc/src/main.c"\
-	"D:/Dokument/GitHub/xcc/src/ports.h"
+	"D:/Dokument/GitHub/xcc/src/ports.h"\
+	"D:/Dokument/GitHub/xcc/src/drill.h"
 	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  $(INC) -o"debug\main.o12" "D:/Dokument/GitHub/xcc/src/main.c"
 !EICONF	Debug
 
@@ -280,7 +287,8 @@ clean:
 	-I"D:\Program\EducDist\bin\..\include" $(INC) -o"final\keyboardML15.o12" "D:/Dokument/GitHub/xcc/src/keyboardML15.c"
 "final\main.o12":	\
 	"D:/Dokument/GitHub/xcc/src/main.c"\
-	"D:/Dokument/GitHub/xcc/src/ports.h"
+	"D:/Dokument/GitHub/xcc/src/ports.h"\
+	"D:/Dokument/GitHub/xcc/src/drill.h"
 	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  \
 	-I"D:\Program\EducDist\bin\..\include" $(INC) -o"final\main.o12" "D:/Dokument/GitHub/xcc/src/main.c"
 !EICONF	Final

@@ -2,12 +2,9 @@
 #include "drill.h"
 unsigned char ML4Shadow;
 
-void main(){
-	while(1){}
-}
-
 void MotorStart(){
 	OutOne(2);
+	hold();
 }
 void MotorStop(){
 	OutZero(2);
@@ -21,14 +18,16 @@ void DrillUp(){
 int Nstep(int a){
 	int i;
 	for(i = 0; i<a; i++){
-		if(BORR_STATUS & 0xFD){
+		if(0 == (BORR_STATUS & 0x2)){
 			Alarm(2);
 			return 0;
 		}
 		OutOne(1);
+		hold();
 		OutOne(0);
-		//delay();
-		//delay();
+		hold();
+		hold();
+		OutZero(0);
 		
 	}
 	return 1;
@@ -38,9 +37,9 @@ int DrillDownTest(){
 	int i;
 	retry = 20;
 	for(i=0; i<retry; i++){
-		if(BORR_STATUS & ~0x4)
+		if((BORR_STATUS & 0x4))
 			return 1;
-		//delay();
+		hold();
 	}
 	Alarm(2);
 	return 0;
@@ -48,13 +47,13 @@ int DrillDownTest(){
 void Alarm(int a){
 	if(a != 0){
 		do{
-		//delay();
-		//delay();
+		hold();
+		hold();
 		OutOne(4);
-		//delay();
-		//delay();
-		//delay();
-		//delay();
+		hold();
+		hold();
+		hold();
+		hold();
 		OutZero(4);
 		a--;
 		}while(a != 0);
@@ -66,7 +65,9 @@ int DrillHole(){
 	unsigned int res;
 	DrillDown();
 	res = DrillDownTest();
+	hold();
 	DrillUp();
+	hold();
 	return res;
 }
 int RefPos(){
@@ -110,6 +111,6 @@ void OutOne(int bit){
 void OutZero(int bit){
 	int a = 1;
 	a = a << bit;
-	clear(ML4Shadow,~a);
+	clear(ML4Shadow,a);
 	BORR_CTRL = ML4Shadow;
 }
